@@ -2,36 +2,43 @@ import React, { useEffect, useState } from "react";
 import Static1 from "./Static1";
 import Static2 from "./Static2";
 import Dynamic from "./Dynamic";
-import sortJsonPrefecture from "./../helpers/sortJsonPrefecture";
-import sortJsonDay from "./../helpers/sortJsonDay";
+import sortData from "./../helpers/sortData";
+import axios from "axios";
 
-const sortData = (arr, type = "prefecture") => {
-  if (!arr.length) {
-    return;
-  }
-  if (type !== "prefecture") {
-    return sortJsonDay(arr);
-  }
-  return sortJsonPrefecture(arr);
+const fetchCourseData = async (url, pageId) => {
+  const result = await axios.get(url)
+    .then(res => {
+      const {data} = res;
+      const pageData = data.filter(course => course.ページid === pageId);
+      const courses = sortData(pageData);
+      return {
+        courses
+      }
+    })
+    .catch( error => ({
+      error
+    }));
+    console.log(result)
+    return result;
 };
 
 const App = ({ pageId, type, closeDate, deleteDate }) => {
-  console.log(pageId, type, closeDate, deleteDate);
 
   const [courses, setCourses] = useState([]);
   const [sortType, setSortType] = useState("");
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("/json/course.json")
-      .then(res => res.json())
-      .then(res => {
-        const pageData = res.filter(course => course.ページid === pageId);
-        const sortedData = sortData(pageData);
-        setCourses(sortedData);
-      })
-      .catch(e => setError(e));
-  }, []);
+    async function fetchData() {
+      const { courses, error } = await fetchCourseData('/json/course.json', pageId);
+      if ( error ) {
+        setError(error)
+      }
+
+      setCourses(courses);
+    }
+    fetchData();
+  }, []); 
 
   const onSort = (data, type) => {
     const sortedData = sortData(data, type);

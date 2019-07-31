@@ -1,0 +1,9 @@
+collegeData([
+{"id":"180387", "time":"1", "remainder":"0"},
+{"id":"180310", "time":"1", "remainder":"0"},
+{"id":"180388", "time":"1", "remainder":"0"},
+{"id":"180490", "time":"1", "remainder":"11"},
+{"id":"180558", "time":"1", "remainder":"16"},
+{"id":"180555", "time":"1", "remainder":"20"},
+{"id":"180491", "time":"1", "remainder":"1"}
+]);
