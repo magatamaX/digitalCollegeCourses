@@ -7,15 +7,21 @@ import CourseContentEntry from "./../components/CourseContentEntry";
 
 const Dynamic = ({ courses }) => {
   console.log("ダイナミック", courses);
+
+  if (!courses.length) {
+    return <p>Now loading...</p>;
+  }
   return (
     <div>
       <CourseIndex courses={courses} />
       {courses.map((course, i) => (
-      <CourseContent key={i} id={course.講座id}>
-        <CourseContentFlexbox courseInfo={course} />
-        <CourseContentSelect courseInfo={course} />
-        <CourseContentEntry href={`/school/entry.php?seminar_id=${course.講座id}`} />
-      </CourseContent>
+        <CourseContent key={i} id={course.講座id}>
+          <CourseContentFlexbox courseInfo={course} />
+          <CourseContentSelect courseInfo={course} />
+          <CourseContentEntry
+            href={`/school/entry.php?seminar_id=${course.講座id}`}
+          />
+        </CourseContent>
       ))}
     </div>
   );

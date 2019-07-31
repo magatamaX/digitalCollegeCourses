@@ -14,9 +14,7 @@ const Left = ({ courseInfo }) => (
         </div>
         <div className="course__content-card-teacher-description pc-show">
           <h5 className="course__content">{courseInfo.講師}</h5>
-          <p>
-            [[[[[[[[講師説明]]]]]]]]
-          </p>
+          <p>[[[[[[[[講師説明]]]]]]]]</p>
         </div>
       </div>
     </div>
@@ -35,12 +33,10 @@ const Right = ({ courseInfo }) => (
         <CourseIcons courseInfo={courseInfo} />
       </div>
       <div className="course__content-information">
-        <div className="course__content-attention">
-          {courseInfo.講座説明}
-        </div>
+        <div className="course__content-attention">{courseInfo.講座説明}</div>
       </div>
       <div className="course__content-tag sp-show">
-      <CourseIcons courseInfo={courseInfo} />
+        <CourseIcons courseInfo={courseInfo} />
       </div>
 
       <div className="course__content-accordion">
@@ -61,11 +57,13 @@ const Right = ({ courseInfo }) => (
       <ul className="course__content-price">
         <li className="course__regularPriceMember">通常会員</li>
         <li className="course__regularPrice">
-          ¥{courseInfo.料金その他}<span>税込</span>
+          ¥{courseInfo.料金その他}
+          <span>税込</span>
         </li>
         <li className="course__premirePriceMember">プレミア会員</li>
         <li className="course__premirePrice">
-          ¥{courseInfo.料金プレミア}<span>税込</span>
+          ¥{courseInfo.料金プレミア}
+          <span>税込</span>
         </li>
       </ul>
     </div>

@@ -1,6 +1,14 @@
-const sortJsonPrefecture = (data = []) => {
+const sortJsonDay = (data = []) => {
   const sortedData = [...data].sort((aData, bData) => {
     // 第1優先
+    const aYear = aData["開催日1"].substr(aData["開催日1"].length - 2, 2);
+    const bYear = bData["開催日1"].substr(bData["開催日1"].length - 2, 2);
+    const aDay = aData["開催日1"];
+    const bDay = bData["開催日1"];
+    // 第2優先
+    const aTime = aData["時間1"];
+    const bTime = bData["時間1"];
+    // 第3優先
     const aPrefecture = aData["都道府県"];
     const bPrefecture = bData["都道府県"];
     const prefectureList = [
@@ -53,32 +61,25 @@ const sortJsonPrefecture = (data = []) => {
       "鹿児島",
       "沖縄"
     ];
+
     const aPrefectureListNumber = prefectureList.findIndex(
       e => e === aPrefecture
     );
     const bPrefectureListNumber = prefectureList.findIndex(
       e => e === bPrefecture
     );
-    // 第2優先
-    const aYear = aData["開催日1"].substr(aData["開催日1"].length - 2, 2);
-    const bYear = bData["開催日1"].substr(bData["開催日1"].length - 2, 2);
-    const aDay = aData["開催日1"];
-    const bDay = bData["開催日1"];
-    // 第3優先
-    const aTime = aData["時間1"];
-    const bTime = bData["時間1"];
 
-    if (aPrefectureListNumber < bPrefectureListNumber) return -1;
-    if (aPrefectureListNumber > bPrefectureListNumber) return 1;
     if (aYear < bYear) return -1;
     if (aYear > bYear) return 1;
     if (aDay < bDay) return -1;
     if (aDay > bDay) return 1;
     if (aTime < bTime) return -1;
     if (aTime > bTime) return 1;
+    if (aPrefectureListNumber < bPrefectureListNumber) return -1;
+    if (aPrefectureListNumber > bPrefectureListNumber) return 1;
     return 0;
   });
   return sortedData;
 };
 
-export default sortJsonPrefecture;
+export default sortJsonDay;

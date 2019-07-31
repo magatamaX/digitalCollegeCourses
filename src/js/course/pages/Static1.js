@@ -3,14 +3,14 @@ import changeDateFormat from "./../helpers/changeDateFormat";
 import SortButton from "./../components/SortButton";
 import EntryButton from "./../components/EntryButton";
 
-const Static1 = ({ courses }) => {
+const Static1 = ({ courses, onSort, sortType }) => {
   const [id, setId] = useState("");
 
   return (
     <div className="course__content-select">
       <p>下記講座のいずれかを選択してください。</p>
 
-      <SortButton />
+      <SortButton onSort={onSort} sortType={sortType} />
 
       {courses.map((courseInfo, i) => (
         <label key={courseInfo.講座id}>
