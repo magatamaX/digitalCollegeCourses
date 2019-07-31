@@ -8,7 +8,7 @@ const EntryButton = ({ href }) => {
         お申し込み
       </a>
     </div>
-  )
-}
+  );
+};
 
 export default EntryButton;

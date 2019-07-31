@@ -12,7 +12,7 @@ const SortButton = () => {
         </li>
       </ul>
     </div>
-  )
-}
+  );
+};
 
 export default SortButton;

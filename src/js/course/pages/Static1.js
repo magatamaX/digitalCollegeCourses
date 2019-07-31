@@ -4,8 +4,7 @@ import SortButton from "./../components/SortButton";
 import EntryButton from "./../components/EntryButton";
 
 const Static1 = ({ courses }) => {
-
-  const [ id, setId ] = useState("");
+  const [id, setId] = useState("");
 
   return (
     <div className="course__content-select">
