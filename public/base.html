@@ -428,7 +428,7 @@
 
         <!-- 講座選択 -->
         <form id="courseSelectForm">
-          <div id="step_1" class="js-event-list-wrapper"></div>
+          <div id="js-course" data-page-id="step_1" class="js-event-list-wrapper"></div>
           <!-- // 講座選択 -->
 
           <div class="base__content-select-btn-base"><a class="js-course-submit-btn" href="#"><img src="../../images/course/btn_select.png" alt="">お申し込み</a></div>
@@ -523,13 +523,6 @@
 <script type="text/javascript" src="/js/scripts.js"></script>
 <!-- <script type="text/javascript" src="./course_common.js"></script> -->
 <script type="text/javascript" src="/js/course.js"></script>
-<script>
-var courseSelectForm = document.getElementById('courseSelectForm');
-courseSelectForm.addEventListener("change", function(e) {
-  console.log(e.target.value);
-  courseSelectForm.querySelector('.js-course-submit-btn').setAttribute("href", "#" + e.target.value)
-})
-</script>
 </body>
 </html>
 
