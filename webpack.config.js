@@ -17,7 +17,8 @@ const SCSS_SOURCE_MAP_STYLE = 'inline-source-map'; // 'inline-source-map', 'sour
 ** JS Setting
 ***************************************/
 const JS_ENTRY = {
-    'js/course': './src/js/course.js',
+    'js/course': ['@babel/polyfill', './src/js/course.js'],
+    
 }
 const JS_SOURCE_MAP_STYLE = 'inline-source-map'; // 'inline-source-map', 'source-map', etc.
 
@@ -46,8 +47,7 @@ let scssMinimize = (process.env.npm_lifecycle_event !== 'build:dev');
 
 module.exports = [
     {
-        stats: { children: false },
-        cache: true,
+        devtool: 'source-map',
         entry: JS_ENTRY,
         output: {
             path: `${__dirname}/${ROOT_PATH_NAME}`,

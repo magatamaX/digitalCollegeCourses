@@ -1,3 +1,3 @@
-import Course from './course/index';
+import Course from "./course/index";
 
 Course();
