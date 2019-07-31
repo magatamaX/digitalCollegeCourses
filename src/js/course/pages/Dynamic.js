@@ -6,15 +6,15 @@ import CourseContentSelect from "./../components/CourseContentSelect";
 import CourseContentEntry from "./../components/CourseContentEntry";
 
 const Dynamic = ({ courses }) => {
-  console.log("ダイナミックダヨ", courses);
+  console.log("ダイナミック", courses);
   return (
     <div>
       <CourseIndex courses={courses} />
       {courses.map((course, i) => (
       <CourseContent key={i} id={course.講座id}>
         <CourseContentFlexbox courseInfo={course} />
-        <CourseContentSelect />
-        <CourseContentEntry />
+        <CourseContentSelect courseInfo={course} />
+        <CourseContentEntry href={`/school/entry.php?seminar_id=${course.講座id}`} />
       </CourseContent>
       ))}
     </div>

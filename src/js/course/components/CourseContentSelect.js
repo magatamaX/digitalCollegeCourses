@@ -1,19 +1,20 @@
 import React from "react";
+import changeDateFormat from "./../helpers/changeDateFormat";
 
-const CourseContentSelect = () => {
+const CourseContentSelect = ({ courseInfo }) => {
   return (
     <div className="course__content-select" style={{ paddingBottom: 0}}>
-      <h6 className="course__content">北海道</h6>
+      <h6 className="course__content">{courseInfo.都道府県}</h6>
       <div className="course__content-select-card">
         <ul>
           <li className="course__content-select-card-date">
-            <span>11/16</span>（土）　7:00～10:00
+            <span>{changeDateFormat(courseInfo.開催日1)}</span>（{courseInfo.曜日1}）　{courseInfo.時間1}
           </li>
           <li className="course__content-select-card-number">
-            定員：20／残数：△
+            定員：{courseInfo.定員}／残数：△
           </li>
           <li className="course__content-select-card-place">
-            札幌鉄道市内線沿線（札幌市）
+            {courseInfo.会場1}
           </li>
         </ul>
       </div>
