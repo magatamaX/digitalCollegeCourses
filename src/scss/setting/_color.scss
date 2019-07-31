@@ -1,0 +1,69 @@
+@charset "utf-8";
+
+// Color
+//------------------------------------------------------------------------------
+
+	//thema color
+	$color_main: #ec4501;
+	$color_sub: #111;
+
+	//text color
+	$color_text: #333;
+
+	//Link color
+	$color_link: #ec4501;
+
+	//Grayscale
+	$black100: #000;
+	$black90: #333;
+	$black80: #504f4f;
+	$black70: #666;
+	$black60: #7d7d7d;
+	$black50: #999;
+	$black40: #b2b1b1;
+	$black30: #CCC;
+	$black20: #DDD;
+	$black10: #e3e3e3;
+	$black0: #f7f7f7;
+
+	// amo color
+	$neon_orange: #ff552e;
+	$nude: rgb(238,211,191);
+	$earth_gray: rgb(142,130,124);
+	$pink: rgb(255,88,93);
+	$lilac: rgb(180,181,223);
+	$teal: rgb(140,226,208);
+	$yellow: rgb(244,218,64);
+	$deep_blue: rgb(0,71,187);
+	$light_blue: rgb(141,200,232);
+
+	// Other
+	$red: #ea0a0a;
+	$blue: #2D72A7;
+	$green: #9abc50;
+
+
+
+// Color Components
+//------------------------------------------------------------------------------
+
+	$colors: (
+		red: $red,
+		blue: $blue,
+		yellow: $yellow,
+		green: $green
+	);
+
+	// $colorsで定義した色は、Megane Templateの「Text Color」コンポーネントとしても定義されます。
+	//（http://megane-template.com/components/text.html#TextColor）
+	// ex）ピンク色を追加する場合
+	// $pink: #f87891;
+	// $colors: (
+	// 	：
+	// 	：
+	// 	pink: $pink
+	// );
+	// ↓↓↓
+	// .f-txt_pink{
+	// 	color: #f87891;
+	// }

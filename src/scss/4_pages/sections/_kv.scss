@@ -1,0 +1,118 @@
+@charset "utf-8";
+
+.fw {
+// ---------------------------------------------------------------------------
+//
+// /sample/index.html
+//
+// ---------------------------------------------------------------------------
+
+
+    .p-kv {
+        position: relative;
+
+        
+        %--pc {
+            display: block;
+    
+            @include max(s) {
+                display: none;
+            }
+        }
+    
+        %--sp {
+            display: none;
+    
+            @include max(s) {
+                display: block;
+            }
+        }
+
+
+        .__title {
+            position: absolute;
+            @include top(50%, vw(120));
+            @include left(50%);
+            transform: translate(-50%,-50%);
+            @include width(846px, vw(613));
+            z-index: 10;
+
+            @include max(s) {
+                transform: translateX(-50%);
+            }
+
+            &__image {
+                &--pc {
+                    @extend %--pc;
+                }
+
+                &--sp {
+                    @extend %--sp;
+                }
+            }
+
+            &__sub {
+                @include fontSize(20px, vw(28));
+                display: block;
+                @include mt(10px, vw(30));
+                color: #fff;
+                text-align: center;
+            }
+        }
+
+        .kv {
+            
+            @include max(s) {
+                display: none;
+            }
+
+            &__image {
+                @include width(100%);
+            }
+
+        }
+
+        .kv-slide,
+        .kv-slide-navi {
+            display: none;
+
+            @include max(s) {
+                display: block;
+            }
+        }
+
+        @include max(s) {
+            .kv-slide {
+
+                &__item {
+
+                    &.active {
+
+                    }
+                }
+            }
+
+            .kv-slide-navi {
+                position: absolute;
+                bottom: vw(80);
+                left: 50%;
+                transform: translateX(-50%);
+
+                &__list {
+                    @include flexBase( $wrap: "nowrap", $direction: "row", $justify: "center", $align: "center" );
+                }
+
+                &__item {
+                    @include mg(0 5px);
+                    color: #e2dfdf;
+
+                    &.active {
+                        color: $earth_gray;
+                    }
+                }
+
+            }
+        }
+    }
+
+}//.fw

@@ -1,0 +1,161 @@
+@charset "utf-8";
+
+.fw {
+// ---------------------------------------------------------------------------
+//
+// /sample/index.html
+//
+// ---------------------------------------------------------------------------
+    .p-intro {
+
+        @include pd(100px 0 85px, vw(90) 0);
+        text-align: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center top;
+        background-image: url('https://s3-ap-northeast-1.amazonaws.com/amo-style-brands/test/fit/images/intro/bg_pc.jpg');
+
+        @include max(s) {
+            background-image: url('https://s3-ap-northeast-1.amazonaws.com/amo-style-brands/test/fit/images/intro/bg_sp.jpg');
+        }
+
+        .__title {
+            text-align: center;
+            @include mb(30px);
+
+            &__image {
+
+                &--pc {
+                    @include width(632.5px);
+
+                    @include max(s) {
+                        display: none;
+                    }
+                }
+
+                &--sp {
+                    display: none;
+
+                    @include max(s) {
+                        display: inline;
+
+                        width: vw(536);
+                    }
+                }
+
+            }
+        }
+
+        .emph {
+            @include mg(10px 0);
+            @include fontSize(25px);
+            font-weight: bold;
+
+            &__l {
+                @include fontSize(40px);
+                line-height: 1;
+            }
+        }
+
+        .button {
+            @include mt(35px);
+            text-align: center;
+        }
+
+        .__anchors {
+            @include mt(30px, vw(90));
+
+            @include max(s) {
+                position: relative;
+                padding-top: vw(560);
+
+                &::before {
+                    content: '';
+                    display: block;
+                    width: 100%;
+                    height: vw(560);
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background-image: url('https://s3-ap-northeast-1.amazonaws.com/amo-style-brands/test/fit/images/intro/anchors_before-bg.jpg');
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                }
+            }
+
+            &__link {
+                display: block;
+                color: $color_text;
+                @include fontSize(12px);
+
+                .__name {
+                    @include fontSize(18px);
+                    font-weight: 700;
+                    line-height: 1;
+                }
+            }
+
+            %__item {
+                display: block;
+                cursor: pointer;
+                @include pd(20px 0 25px, vw(40) 0);
+                text-align: center;
+                color: $color_text;
+
+                @include max(s) {
+                    @include flexBase( $wrap: "nowrap", $direction: "column", $justify: "center", $align: "center" );
+                    line-height: 1.4;
+                }
+
+                position: relative;
+                &:before {
+                    content: "";
+                    display: block;
+                    border-top: solid 1px $color_text;
+                    border-right: solid 1px $color_text;
+                    width: 6px;
+                    height: 6px;
+                    position: absolute;
+                    bottom: 12px;
+                    left: 50%;
+                    transform: translateX(-50%) rotate(135deg);
+
+                    @include max(s) {
+                        bottom: 50%;
+                        left: 90%;
+                        transform: translateX(-50%) translateY(50%) rotate(45deg);
+                    }
+                }
+            }
+
+            &__item {
+                &--fitchart {
+                    @extend %__item;
+
+                    background-color: #85e0d1;
+                }
+
+                &--counseling {
+                    @extend %__item;
+
+                    background-color: #77c2e4;
+                }
+
+                &--report {
+                    @extend %__item;
+
+                    background-color: #acaad8;
+                }
+
+                &--users {
+                    @extend %__item;
+
+                    background-color: #ffa3a4;
+                }
+            }
+        }
+
+    }
+
+}//.fw

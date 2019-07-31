@@ -1,0 +1,268 @@
+@charset "utf-8";
+
+.fw {
+// ---------------------------------------------------------------------------
+//
+// /sample/index.html
+//
+// ---------------------------------------------------------------------------
+    .p-counseling {
+        dl,dt,dd { float: none !important };
+
+        @include pd(100px 0, vw(140) 0);
+
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center top;
+        background-image: url('https://s3-ap-northeast-1.amazonaws.com/amo-style-brands/test/fit/images/counseling/bg_pc.jpg');
+
+        @include max(s) {
+            background-image: url('https://s3-ap-northeast-1.amazonaws.com/amo-style-brands/test/fit/images/counseling/bg_sp.jpg');
+        }
+
+        .__title {
+            text-align: center;
+
+            @include fontSize(30px);
+            line-height: 1.2;
+            @include mb(10px);
+        }
+
+        .__subtitle {
+            text-align: center;
+
+            @include fontSize(12px);
+            font-weight: bold;
+            @include mb(10px, 20px);
+        }
+
+        .__lead {
+            text-align: center;
+            @include mb(35px);
+        }
+
+        %__box {
+            border: 2px solid #e2dfdf;
+            @include height(400px, auto);
+
+            position: relative;
+        }
+
+        .counseling {
+            @extend %__box;
+            @include mb(80px, 0);
+
+            @include pd(0, 25px 25px 50px);
+
+            background-image: url('https://s3-ap-northeast-1.amazonaws.com/amo-style-brands/test/fit/images/counseling/counseling_bg.png');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+
+            @include max(s) {
+                background-image: none;
+                background-color: rgba(255,255,255,.8);
+                border-bottom: 0;
+            }
+
+            &__inner {
+                // @include width(240px);
+
+                position: absolute;
+                @include top(50%);
+                @include left(50%);
+                transform: translate(-50%,-50%);
+
+                @include max(s) {
+                    position: static;
+                    transform: none;
+                }
+            }
+
+            &__counselor {
+                @include width(310px, auto);
+
+                position: absolute;
+                @include top(-10px);
+                @include left(860px);
+
+                @include max(s) {
+                    position: static;
+                    margin-top: -45px;
+                    margin-bottom: 20px;
+                }
+            }
+
+            &__title {
+                text-align: center;
+                font-weight: bold;
+                @include mb(15px);
+                line-height: 1.2;
+
+                .num {
+                    @include fontSize(20px);
+                    @include mg(0 5px);
+                    color: $pink;
+                }
+            }
+
+            &__list {
+               @include width(300px);
+               @include mg(0 auto);
+            }
+
+            &__item {
+                @include mb(10px);
+
+                .__item {
+                    display: table;
+                    table-layout: fixed;
+                    width: 100%;
+
+                    &__number {
+                        display: table-cell;
+                        @include width(33px);
+                        vertical-align: middle;
+                    }
+
+                    &__text {
+                        display: table-cell;
+                        vertical-align: middle;
+                        @include pl(10px);
+                        
+                        span {
+                            display: block;
+                            @include fontSize(12px);
+                        }
+                    }
+                }
+            }
+
+            &__message {
+                @include flexBase( $wrap: "nowrap", $direction: "column", $justify: "center", $align: "center" );
+                @include pd(10px 0);
+                @include width(90%);
+                @include mg(0 auto);
+                background-image: url('https://s3-ap-northeast-1.amazonaws.com/amo-style-brands/test/fit/images/counseling/textbg.png');
+                background-repeat: no-repeat;
+                background-size: 100% 100%;
+                background-position: center;
+                @include fontSize(12px);
+                line-height: 1.4;
+                text-align: center;
+            }
+
+            &__note {
+                @include fontSize(10px);
+                text-align: center;
+                @include mt(20px);
+            }
+
+        }
+
+        .before-after {
+            @extend %__box;
+
+            background-color: rgba(255,255,255,.8);
+
+            @include flexBase( $wrap: "nowrap", $direction: "row", $justify: "flex-start", $align: "center" );
+
+            @include max(s) {
+                display: block;
+                padding-top: vw(560);
+                padding-bottom: vw(220);
+                background-image: url('https://s3-ap-northeast-1.amazonaws.com/amo-style-brands/test/fit/images/counseling/counseling_bg_sp.jpg');
+                background-repeat: no-repeat;
+                background-size: 100%;
+                background-position: center top;
+            }
+
+            &__textbox {
+                @include width(50%, auto);
+                position: relative;
+                text-align: center;
+
+                @include max(s) {
+                    position: static;
+                }
+
+                &-inner {
+                    @include pb(40px);
+
+                    @include max(s) {
+                        position: static;
+                        transform: none;
+                    }
+                }
+            }
+
+            &__slide {
+                @include width(488px, auto);
+
+                .slide {
+                    @include width(100%, auto);
+                   
+                }
+            }
+
+            &__title {
+                @include width(330px, vw(550));
+                @include mg(0 auto 20px);
+            }
+
+            &__slide-navi {
+                @include flexBase( $wrap: "nowrap", $direction: "row", $justify: "center", $align: "center" );
+
+                position: absolute;
+                bottom: 110px;
+                left: 270px;
+
+                @include max(s) {
+                    position: absolute;
+                    bottom: vw(140);
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+
+            &__slide-selector {
+                @include fontSize(14px);
+                @include mg(0 5px);
+                color: #e2dfdf;
+                cursor: pointer;
+
+                &.active {
+                    color: $earth_gray;
+                }
+            }
+
+            &__slide-switch {
+
+                .__back,
+                .__next {
+                    @include width(15px, vw(15));
+                    @include height(30px, auto);
+                    cursor: pointer;
+                    position: absolute;
+                    @include top(50%, 202.5vw);
+                    transform: translateY(-50%);
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                .__back {
+                    @include right(53%, 70vw);
+                }
+
+                .__next {
+                    @include right(6%, 18vw);
+                }
+            }
+        }
+
+    }
+
+
+}//.fw

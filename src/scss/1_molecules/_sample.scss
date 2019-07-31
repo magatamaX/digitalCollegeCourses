@@ -1,0 +1,75 @@
+@charset "utf-8";
+
+.fw {
+
+    // ----------------------------------------------------------
+    // Sample
+    // ----------------------------------------------------------
+    .m-titleBox {
+        text-align: center;
+        @include mb(35px);
+        position: relative;
+
+        .__title {
+            @include mb(10px);
+        }
+
+    }
+
+    .m-titleBox2 {
+        text-align: center;
+        @include mb(40px);
+        position: relative;
+
+        .lead {
+            @include fontSize(15px);
+            font-weight: 700;
+            @include mb(0, 10px);
+            letter-spacing: 0.2em;
+        }
+
+        .__title {
+            @include fontSize(25px);
+            font-weight: bold;
+            @include mt(10px);
+
+            @include max(s) {
+                line-height: 1.4;
+            }
+
+            &__sub {
+                display: block;
+                @include fontSize(18px);
+                line-height: 1.2;
+            }
+        }
+
+        .text {
+            @include fontSize(12px);
+            font-weight: bold;
+            @include mt(0, 10px);
+
+            &--normal {
+                @include fontSize(12px);
+                @include mt(20px);
+            }
+        }
+
+        .__em-text {
+            background-image: url('https://s3-ap-northeast-1.amazonaws.com/amo-style-brands/test/fit/images/common/em-text-bg.png');
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: center center;
+
+            display: inline-block;
+            @include pd(0 30px, 0 10vw);
+            @include mt(10px, vw(20));
+
+            @include max(s) {
+                background-image: url('https://s3-ap-northeast-1.amazonaws.com/amo-style-brands/test/fit/images/common/em-text-bg-sp.png');
+            }
+        }
+    }
+
+
+}//.fw

@@ -1,0 +1,192 @@
+@charset "utf-8";
+
+.fw {
+// ---------------------------------------------------------------------------
+//
+// /sample/index.html
+//
+// ---------------------------------------------------------------------------
+    .p-sign {
+
+        @include pd(100px 0, vw(140) 0);
+        background-color: #e7e4e3;
+
+        .instructor {
+            max-width: 320px;
+            @include mg(0 auto);
+            position: relative;
+            left: -40px;
+            @include max(s) {
+                width: vw(425);
+                left: auto;
+                position: relative;
+                left: vw(-50);
+            }
+        }
+
+        .sign {
+            @include mt(-60px, vw(40));
+
+            &__list {
+
+            }
+
+            %__text {
+                background-color: #fff;
+
+                @include width(auto, vw(590));
+                @include height(275px, vw(470));
+                @include pt(100px);
+                text-align: center;
+                @include fontSize(12px);
+                @include ml(auto);
+                @include mr(auto);
+
+                @include max(s) {
+                    min-height: 230px;
+                }
+            }
+
+            &__text {
+                @extend %__text;
+                
+
+                &--1 {
+                    @extend %__text;
+
+                    @include mt(-120px, vw(-260));
+                }
+
+                &--2 {
+                    @extend %__text;
+
+                    @include mt(-85px, vw(-180));
+                }
+
+                &--3 {
+                    @extend %__text;
+
+                    @include mt(-65px, vw(-150));
+                }
+            }
+
+            &__title {
+                @include fontSize(24px);
+                font-weight: bold;
+            }
+
+            &__item {
+
+                &--2 {
+                    @include mt(120px,vw(60));
+                }
+
+                @include max(s) {
+
+                    @include mt(vw(60));
+                }
+            }
+
+            &__image {
+
+                &--1 {
+                    position: relative;
+                    @include width(auto, vw(530));
+                    @include left(-28px, 3vw);
+                }
+
+                &--2 {
+                    position: relative;
+                    @include width(auto, vw(590));
+                    @include left(47px, 15vw);
+                }
+
+                &--3 {
+                    position: relative;
+                    @include width(auto, vw(550));
+                    @include left(-37px, 0);
+                }
+            }
+
+        }
+
+        .time {
+            border: 2px solid #bdb5b2;
+            @include width(750px, auto);
+            @include mg(40px auto 0);
+            @include pd(40px 50px, 50px 30px 40px);
+
+            @include flexBase( $wrap: "wrap", $direction: "row", $justify: "flex-start", $align: "center" );
+
+            &__block {
+                flex: 1;
+                text-align: center;
+
+                @include min(s) {
+                    &:first-child {
+                        padding-right: 25px;
+                    }
+                    &:nth-child(2) {
+                        padding-left: 25px;
+                    }
+                }
+
+                @include max(s) {
+                    flex: 0 0 100%;
+
+                    + .time__block {
+                        margin-top: 20px;
+                    }
+                }
+            }
+
+            &__title {
+                @include fontSize(25px);
+                font-weight: bold;
+                line-height: 1.2;
+
+                span {
+                    @include fontSize(50px);
+                    @include max(s) {
+                        display: block;
+                        line-height: 1.4;
+                    }
+                }
+            }
+
+            &__note {
+                @include fontSize(10px);
+                @include mt(5px, vw(20));
+            }
+
+            &__campaign-link {
+                display: block;
+                background-color: #ff552c;
+                color: #fff;
+                @include pd(20px, 20px 10px);
+                @include fontSize(12px);
+                @include mb(15px);
+                line-height: 1;
+
+                span {
+                    display: block;
+                    @include fontSize(15px);
+                    @include mb(5px);
+                    font-weight: 700;
+                }
+            }
+
+            &__shops-link {
+                display: block;
+                background-color: $earth_gray;
+                color: #fff;
+                @include pd(15px);
+                @include fontSize(12px);
+                @include mb(15px);
+                font-weight: bold;
+            }
+        }
+
+    }
+
+}//.fw

@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+.fw {
+
+    // ----------------------------------------------------------
+    // Title
+    // ----------------------------------------------------------
+    .a-title {
+        font-weight: 700;
+        font-family: $font_raleway;
+        @include fontSize(28px);
+        line-height: 1;
+    }
+
+    .a-subtitle {
+        
+    }
+
+
+}//.fw

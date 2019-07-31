@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+.fw {
+
+    // ----------------------------------------------------------
+    // Other
+    // ----------------------------------------------------------
+    .a-font {
+
+        &--playfair {
+            font-family: $font_playfair;
+            font-weight: 700;
+        }
+
+        &--raleway {
+            font-family: $font_raleway;
+        }
+    }
+
+    .a-link {
+        color: $color_text;
+        text-decoration: underline;
+        @include fontSize(12px);
+
+        @include arrow($color: $color_text, $size:4, $width:1,$layout:right,$direction:right);
+
+        &:hover {
+            opacity: .8;
+        }
+    }
+
+    .a-color {
+
+        &--neon-orange {
+            color: $neon_orange;
+        }
+
+    }
+
+    .a-br {
+
+        &--pc {
+            @include max(s) {
+                display: none;
+            }
+        }
+
+        &--sp {
+            display: none;
+
+            @include max(s) {
+                display: inline;
+            }
+        }
+    }
+
+
+}//.fw

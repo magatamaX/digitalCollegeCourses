@@ -1,0 +1,234 @@
+@charset "utf-8";
+
+.fw {
+// ---------------------------------------------------------------------------
+//
+// /sample/index.html
+//
+// ---------------------------------------------------------------------------
+    .p-report {
+        @include pd(100px 0 0, vw(140) 0 0);
+
+        .__report {
+
+            @include mg(0, 0 -20px);
+
+            &__list {
+
+            }
+
+            %__item {
+                position: relative;
+                @include mb(40px, 0);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+
+                &::before {
+                    content: '';
+                    width: 100%;
+                    padding-top: 100%;
+                    display: block;
+                    box-sizing: border-box;
+                }
+            }
+
+            &__item {
+                @extend %__item;
+
+                @for $i from 1 through 7 {
+                    &--#{$i} {
+                        @extend %__item;
+                        background-image: url('https://s3-ap-northeast-1.amazonaws.com/amo-style-brands/test/fit/images/report/bg#{$i}.jpg');
+                    }
+                }
+
+                &--8 {
+                    @extend %__item;
+                    background-image: url('https://s3-ap-northeast-1.amazonaws.com/amo-style-brands/test/fit/images/report/bg8_pc.jpg');
+
+                    @include max(s) {
+                        background-image: url('https://s3-ap-northeast-1.amazonaws.com/amo-style-brands/test/fit/images/report/bg8_sp.jpg');
+                    }
+
+                    &::before {
+                        padding-top: 0 !important;
+
+                        @include max(s) {
+                            padding-top: 135% !important;
+                        }
+                    }
+                }
+
+            }
+
+            &__inner {
+                    text-align: center;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background-color: #fff;
+                    bottom: 0;
+                    right: 0;
+                    margin: 30px;
+                    padding: 60px 25px 30px;
+            }
+
+            &__title {
+                background-color: $earth_gray;
+                color: #fff;
+                font-weight: 700;
+
+                position: absolute;
+                @include top(0);
+                @include left(0);
+                @include width(100%);
+                line-height: 35px;
+                @include fontSize(11px);
+
+                @include max(s) {
+
+                }
+
+                &::after {
+                    content: '';
+                    display: block;
+                    background-color: $earth_gray;
+                    width: 16px;
+                    height: 16px;
+                    position: absolute;
+                    bottom: -16 / 2 + px;
+                    left: 50%;
+                    transform: translateX(-50%) rotate(135deg);
+                    -webkit-transform: translateX(-50%) rotate(135deg);
+                }
+            }
+
+            &__number {
+                @include mb(10px, vw(25));
+
+                img {
+                    @include width(49px, vw(87));
+                }
+
+                &--8 {
+                    @include mb(10px, vw(20));
+
+                    img {
+                        @include width(49px, vw(87));
+                    }
+                }
+            }
+
+            &__content {
+
+            }
+
+            &__text {
+                @include fontSize(15px, vw(26));
+
+                &--s {
+                    display: inline-block;
+                    @include fontSize(13px, vw(22));
+
+                    @include max(s) {
+                        display: block;
+                    }
+                }
+            }
+
+            &__note {
+                @include fontSize(10px);
+                @include mt(5px);
+                line-height: 1.2;
+            }
+
+            &__large-number {
+                @include fontSize(25px, vw(50));
+                font-weight: bold;
+                @include mg(0 3px);
+                line-height: 1;
+            }
+
+            %__bg {
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+
+            &__bg {
+
+                @for $i from 1 through 8 {
+                    &--#{$i} {
+                        @extend %__bg;
+                       background-image: url('https://s3-ap-northeast-1.amazonaws.com/amo-style-brands/test/fit/images/report/illust0#{$i}.jpg');
+                    }
+                }
+
+                &--8 {
+                    @include max(s) {
+                        background-image: url('https://s3-ap-northeast-1.amazonaws.com/amo-style-brands/test/fit/images/report/illust08_sp.jpg');
+                    }
+                }
+
+            }
+
+            &__image {
+                @for $i from 1 through 8 {
+                    &--#{$i} {
+                        margin: 0 auto;
+                    }
+                }
+
+                &--1 {
+                    @include width(45%,vw(270));
+                }
+
+                &--2 {
+                    @include width(60%, vw(320));
+                    position: relative;
+                    left: 10%;
+                }
+
+                &--3 {
+                    @include width(63%, vw(425));
+                    position: absolute;
+                    bottom: 0;
+                    left: 18%;
+                }
+
+                &--4 {
+                    @include width(85%, vw(468));
+                }
+
+                &--6 {
+                    @include width(auto, vw(503));
+                }
+
+                &--7 {
+                    @include width(90%);
+                }
+
+                &--8 {
+                    @include width(80%, auto);
+                    img.pc {
+                        @include max(s) {
+                            display: none;
+                        }
+                    }
+
+                    img.sp {
+                        display: none;
+
+                        @include max(s) {
+                            display: inline;
+                        }
+                    }
+                }
+
+            }
+        }
+
+    }
+
+}//.fw

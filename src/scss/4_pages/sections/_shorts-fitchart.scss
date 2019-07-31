@@ -1,0 +1,210 @@
+@charset "utf-8";
+
+.fw {
+// ---------------------------------------------------------------------------
+//
+// /sample/index.html
+//
+// ---------------------------------------------------------------------------
+    .p-shorts-fitchart {
+
+        dl,dt,dd { min-width: 0 !important; float: none !important; }
+
+        @include pd(100px 0, vw(140) 0);
+        background-color: #f7ebe8;
+
+        .close-button {
+            display: none;
+
+            @include max(s) {
+                @include pd(15px);
+                line-height: 1;
+                background-color: #e2dfdf;
+                color: $color_text;
+                text-align: center;
+                width: vw(520);
+                margin: vw(50) auto 0;
+                display: block;
+            }
+        }
+
+        .chart {
+            border: 2px solid $earth_gray;
+
+            &__list {
+                @include flexBase( $wrap: "wrap", $direction:  "row", $justify: "flex-start", $align: "stretch" );
+                background-color: #fff;
+            }
+
+            &__item {
+
+                + .chart__item {
+                    border-left: 2px solid $earth_gray;
+
+                    @include max(s) {
+                        border-left: 0;
+                    }
+                }
+
+                &.half {
+                   width: 50%;
+                }
+
+                &.quarter {
+                    width: 25%;
+                }
+
+                &.eighth {
+                    width: 12.5%;
+                }
+
+                &.half,
+                &.quarter,
+                &.eighth {
+                    @include max(s) {
+                        width: 100%;
+                    }
+                }
+
+                .type {
+
+                    $titleHeight: 80px;
+
+                    @include height(100%, auto);
+                    
+                    %__title {
+                        @include flexBase( $wrap: "nowrap", $direction: "column", $justify: "center", $align: "center" );
+                        color: #fff;
+                        @include fontSize(16px);
+                        font-weight: bold;
+                        @include height($titleHeight);
+                        line-height: 20px;
+                        text-align: center;
+                    }
+
+                    &__title {
+                        @extend %__title;
+
+                        &--shallow {
+                            @extend %__title;
+
+                            background-color: $neon_orange;
+                        }
+
+                        &--regular {
+                            @extend %__title;
+
+                            background-color: #ebc1b2;
+                        }
+
+                        &--semi-deep {
+                            @extend %__title;
+
+                            background-color: #a79a97;
+                        }
+
+                        &--deep {
+                            @extend %__title;
+
+                            background-color: $earth_gray;
+                        }
+                    }
+
+                    &__data {
+                        @include height(calc(100% - #{$titleHeight}), auto);
+                    }
+
+                    &__list {
+                        @include height(100%, auto);
+                    }
+
+                    &__item {
+                        @include height(100%, auto);
+                        @include pd(15px 15px 30px 15px, 0);
+                        @include fontSize(10px);
+                        font-weight: bold;
+                        position: relative;
+
+                        + .type__item {
+                            border-left: 1px solid $earth_gray;
+
+                            @include max(s) {
+                                border-left: 0;
+                                border-top: 1px solid $earth_gray;
+                            }
+                        }
+
+                        .__item {
+
+                            @include max(s) {
+                                @include flexBase( $wrap: "nowrap", $direction: "row", $justify: "flex-start", $align: "stretch" );
+                            }
+
+                            &__image {
+                                @include width(auto, 50%);
+                                @include height(auto, 146px);
+                                @include pd(0, 0 24px);
+
+                                
+                                @include max(s) {
+                                    border-right: 1px solid $earth_gray;
+                                    position: relative;
+                                    
+                                    img {
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        bottom: 0;
+                                        right: 0;
+                                        margin: auto;
+                                        width: 70%;
+                                    }
+                                }
+                            }
+
+                            &__text {
+                                @include width(auto, 50%);
+                                @include pd(0, 15px);
+
+                                @include max(s) {
+                                    position: relative;
+
+                                    @include flexBase( $wrap: "nowrap", $direction: "column", $justify: "center", $align: "flex-start" );
+
+                                    &.sanitary {
+                                        padding-bottom: 30px;
+                                    }
+                                }
+                            }
+
+                            &__name {
+                                @include height(70px, auto);
+                                @include mb(0, 5px);
+                            }
+
+                            &__description {
+                                @include height(60px, auto);
+                            }
+
+                            &__sanitary {
+                                position: absolute;
+                                bottom: 0;
+                                left: 0;
+                                @include width(100%);
+                                @include height(30px);
+                                background-color: #f4ece9;
+                                @include flexBase( $wrap: "nowrap", $direction: "column", $justify: "center", $align: "center" );
+                            }
+
+                        }
+
+
+                    }
+                    
+                }
+            }
+        }
+
+    }
+
+}//.fw

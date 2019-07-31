@@ -1,0 +1,78 @@
+@charset "utf-8";
+
+// ----------------------------------------------------------
+// font-family,size,color,width, etc.
+// ----------------------------------------------------------
+@import "setting/setting";
+
+
+// ----------------------------------------------------------
+// Megane Template Core File
+// ----------------------------------------------------------
+#fitguide {
+
+    dl,dt,dd { min-width: 0 !important; float: none !important; }
+
+@import "../fw/reset";
+@import "mixin";
+@import "base";
+
+$container: 750;
+@function vw($target) {
+    @return ($target / $container) * 100vw;
+}
+
+// ----------------------------------------------------------
+// Atomic Design
+// ----------------------------------------------------------
+
+//Atoms
+@import "0_atoms/atoms";
+
+//Molecules
+@import "1_molecules/molecules";
+
+//Organisms
+@import "2_organisms/organisms";
+
+//Templates
+@import "3_templates/templates";
+
+//Pages
+@import "4_pages/pages";
+
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core";
+// @import "node_modules/@glidejs/glide/src/assets/sass/glide.theme";
+
+.fw {
+    .glide__slides {
+        backface-visibility: visible;
+    }
+
+    .chart-arrow-sp {
+
+            display: block;
+            text-align: center;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            @include bottom(-55px);
+            @include mg(20px 0 0, vw(40) 0 0);
+
+            img {
+                @include width(20px, vw(40));
+            }
+
+    }
+
+    .m-titleBox.active,
+    .m-titleBox2.active {
+        .chart-arrow-sp {
+
+                display: none;
+
+        }
+    }
+}
+
+}
