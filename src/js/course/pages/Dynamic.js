@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import CourseIndex from "./../components/CourseIndex";
 import CourseContent from "./../components/CourseContent";
 import CourseContentFlexbox from "./../components/CourseContentFlexbox";
@@ -7,7 +7,6 @@ import CourseContentEntry from "./../components/CourseContentEntry";
 import Teacher from "./../components/Teacher";
 
 const Dynamic = ({ courses, teachers }) => {
-  console.log("ダイナミック", courses, teachers);
 
   if (!courses.length) {
     return <p>Now loading...</p>;

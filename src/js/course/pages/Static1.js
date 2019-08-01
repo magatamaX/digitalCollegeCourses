@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import changeDateFormat from "./../helpers/changeDateFormat";
 import SortButton from "./../components/SortButton";
 import EntryButton from "./../components/EntryButton";
@@ -13,7 +13,6 @@ const Static1 = ({ courses, onSort, sortType }) => {
       <SortButton onSort={onSort} sortType={sortType} />
 
       {courses.map((courseInfo, i, all) => {
-        console.log(all);
         return (
           <React.Fragment key={i}>
             {sortType === "prefecture" &&

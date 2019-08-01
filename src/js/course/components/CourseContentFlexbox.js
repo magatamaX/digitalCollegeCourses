@@ -3,7 +3,6 @@ import CourseIcons from "./../components/CourseIcons";
 
 const setBreak = str => {
   const arr = str.split("\n");
-  console.log(arr);
   const elms = arr.map((el, i) => <div key={i}>{el}</div>);
   return elms;
 };

@@ -3,7 +3,6 @@ import Static1 from "./Static1";
 import Static2 from "./Static2";
 import Dynamic from "./Dynamic";
 import sortData from "./../helpers/sortData";
-import changeDateFormat from "./../helpers/changeDateFormat";
 import Api from "./../api/";
 
 const api = new Api();
@@ -20,10 +19,6 @@ const App = ({ pageId, type, closeDate, deleteDate }) => {
       const { teachers } = await api.getTeacher("/json/teachers_list.json");
       const { locations } = await api.getLocation("/json/location_list.json");
 
-      await console.log(courses, teachers, locations);
-      // const aaa = courses.filter(c => c.)
-      console.log(changeDateFormat("09-24-2019", "YY-MM-DD"));
-
       setCourses(courses);
       setTeachers(teachers);
       setLocations(locations);
@@ -36,8 +31,6 @@ const App = ({ pageId, type, closeDate, deleteDate }) => {
     setSortType(type);
     setCourses(sortedData);
   };
-
-  console.log(sortType);
 
   if (type === "static1") {
     return (
