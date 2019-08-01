@@ -3,56 +3,41 @@ import Static1 from "./Static1";
 import Static2 from "./Static2";
 import Dynamic from "./Dynamic";
 import sortData from "./../helpers/sortData";
-import axios from "axios";
+import changeDateFormat from "./../helpers/changeDateFormat";
+import Api from "./../api/";
 
-const fetchCourseData = async (url, pageId) => {
-  const result = await axios.get(url)
-    .then(res => {
-      const {data} = res;
-      const pageData = data.filter(course => course.ページid === pageId);
-      const courses = sortData(pageData);
-      return {
-        courses
-      }
-    })
-    .catch( error => ({
-      error
-    }));
-    console.log(result)
-    return result;
-};
+const api = new Api();
 
 const App = ({ pageId, type, closeDate, deleteDate }) => {
-
   const [courses, setCourses] = useState([]);
-  const [sortType, setSortType] = useState("");
-  const [error, setError] = useState(null);
+  const [teachers, setTeachers] = useState([]);
+  const [locations, setLocations] = useState([]);
+  const [sortType, setSortType] = useState("prefecture");
 
   useEffect(() => {
     async function fetchData() {
-      const { courses, error } = await fetchCourseData('/json/course.json', pageId);
-      if ( error ) {
-        setError(error)
-      }
+      const { courses } = await api.getCourse("/json/course.json", pageId);
+      const { teachers } = await api.getTeacher("/json/teachers_list.json");
+      const { locations } = await api.getLocation("/json/location_list.json");
+
+      await console.log(courses, teachers, locations);
+      // const aaa = courses.filter(c => c.)
+      console.log(changeDateFormat("09-24-2019", "YY-MM-DD"));
 
       setCourses(courses);
+      setTeachers(teachers);
+      setLocations(locations);
     }
     fetchData();
-  }, []); 
+  }, []);
 
-  const onSort = (data, type) => {
+  const onSort = (data, type = "prefecture") => {
     const sortedData = sortData(data, type);
     setSortType(type);
     setCourses(sortedData);
   };
 
-  if (error) {
-    return (
-      <p style={{ margin: `3em`, textAlign: `center` }}>
-        通信結果を取得できませんでした。
-      </p>
-    );
-  }
+  console.log(sortType);
 
   if (type === "static1") {
     return (
@@ -69,7 +54,7 @@ const App = ({ pageId, type, closeDate, deleteDate }) => {
   }
 
   if (type === "dynamic") {
-    return <Dynamic courses={courses} />;
+    return <Dynamic courses={courses} teachers={teachers} />;
   }
 
   return <p>nothing.</p>;
