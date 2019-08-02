@@ -8,32 +8,9 @@ import Api from "./../api/";
 
 const api = new Api();
 
-const App = ({ pageId, type, closeDate, deleteDate }) => {
+const App = props => {
   const [courses, setCourses] = useState([]);
-  const [teachers, setTeachers] = useState([]);
-  const [locations, setLocations] = useState([]);
   const [sortType, setSortType] = useState("prefecture");
-  const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    async function fetchData() {
-      setLoading(true);
-
-      const { courses } = await api.getCourse("https://www.fotopus9m.com/api/college/search", pageId);
-      const { teachers } = await api.getTeacher("/schoolnew/json/teachers_list.json");
-      const { locations } = await api.getLocation("/schoolnew/json/location_list.json");
-
-      // helper::開催情報を配列化します。
-      const generatedCourses = await generateCourses(courses);
-
-      await setCourses(generatedCourses);
-      await setTeachers(teachers);
-      await setLocations(locations);
-
-      await setLoading(false);
-    }
-    fetchData();
-  }, []);
 
   const onSort = (data, type = "prefecture") => {
     const sortedData = sortData(data, type);
@@ -41,10 +18,14 @@ const App = ({ pageId, type, closeDate, deleteDate }) => {
     setCourses(sortedData);
   };
 
+  useEffect(() => {
+    onSort([...props.courses]);
+  }, []);
+
+  const { type, teachers, locations } = props;
   if (type === "static1") {
     return (
       <Static1
-        loading={loading}
         courses={courses}
         sortType={sortType}
         onSort={type => onSort(courses, type)}
@@ -53,11 +34,11 @@ const App = ({ pageId, type, closeDate, deleteDate }) => {
   }
 
   if (type === "static2") {
-    return <Static2 loading={loading} courses={courses} />;
+    return <Static2 courses={courses} />;
   }
 
   if (type === "dynamic") {
-    return <Dynamic loading={loading} courses={courses} teachers={teachers} />;
+    return <Dynamic courses={courses} teachers={teachers} />;
   }
 
   return <p>nothing.</p>;

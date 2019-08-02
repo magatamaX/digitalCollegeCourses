@@ -1,5 +1,4 @@
 import React from "react";
-import CourseIndex from "./../components/CourseIndex";
 import CourseContent from "./../components/CourseContent";
 import CourseContentFlexbox from "./../components/CourseContentFlexbox";
 import CourseContentSelect from "./../components/CourseContentSelect";
@@ -7,9 +6,8 @@ import CourseContentEntry from "./../components/CourseContentEntry";
 import Teacher from "./../components/Teacher";
 
 const Dynamic = ({ loading, courses, teachers }) => {
-
   if (loading) {
-    return <p>Now Loading...</p>
+    return <p>Now Loading...</p>;
   }
 
   if (!courses.length) {
@@ -18,7 +16,6 @@ const Dynamic = ({ loading, courses, teachers }) => {
 
   return (
     <div>
-      <CourseIndex courses={courses} />
       {courses.map((course, i) => (
         <CourseContent key={i} id={course.講座id}>
           <CourseContentFlexbox

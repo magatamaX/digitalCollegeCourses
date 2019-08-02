@@ -26,11 +26,12 @@ const JS_SOURCE_MAP_STYLE = 'inline-source-map'; // 'inline-source-map', 'source
 /***************************************
 ** devServer Setting
 ***************************************/
+const PORT_NUMBER = 3000;
 const DEV_SERVER = {
     contentBase: ROOT_PATH_NAME,
     publicPath: "/",
     // open: true,
-    port: 3000,
+    port: PORT_NUMBER,
     host: '0.0.0.0',
     watchContentBase: true
 }
