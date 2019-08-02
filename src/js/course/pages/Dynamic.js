@@ -6,11 +6,16 @@ import CourseContentSelect from "./../components/CourseContentSelect";
 import CourseContentEntry from "./../components/CourseContentEntry";
 import Teacher from "./../components/Teacher";
 
-const Dynamic = ({ courses, teachers }) => {
+const Dynamic = ({ loading, courses, teachers }) => {
+
+  if (loading) {
+    return <p>Now Loading...</p>
+  }
 
   if (!courses.length) {
-    return <p>Now loading...</p>;
+    return <p>現在、参加受け付け中の講座はございません。</p>;
   }
+
   return (
     <div>
       <CourseIndex courses={courses} />
@@ -20,6 +25,7 @@ const Dynamic = ({ courses, teachers }) => {
             courseInfo={course}
             teacherComponent={() => (
               <Teacher
+                id={course.講座id}
                 name={course.講師.split("　").join("")}
                 profile={course.講師プロフィール}
                 teachers={teachers}

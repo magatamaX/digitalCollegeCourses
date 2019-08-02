@@ -10,7 +10,7 @@ export default class Api {
       .then(res => {
         const { data } = res;
         const pageData = data.filter(course => course.ページid === pageId);
-        const courses = sortData(pageData);
+        const courses = sortData(pageData) || [];
         return {
           courses
         };

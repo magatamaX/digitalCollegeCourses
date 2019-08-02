@@ -50,7 +50,7 @@ const Right = ({ courseInfo }) => (
         <input id="tab-two" type="checkbox" name="tabs" />
         <label htmlFor="tab-two">カメラ</label>
         <div className="course__content-accordion-content">
-          <p>{setBreak(courseInfo.講座注記)}</p>
+          <div>{setBreak(courseInfo.講座注記)}</div>
         </div>
         <hr className="course__content-description-hr" />
       </div>

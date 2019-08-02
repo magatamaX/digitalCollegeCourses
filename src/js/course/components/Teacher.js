@@ -1,6 +1,6 @@
 import React from "react";
 
-const Teacher = ({ name, profile, teachers }) => {
+const Teacher = ({ id, name, profile, teachers }) => {
   if (!teachers.length) {
     return null;
   }
@@ -8,7 +8,7 @@ const Teacher = ({ name, profile, teachers }) => {
     <div className="course__content-card-teacher">
       <div className="course__content-card-teacher-avatar">
         <img
-          src={`../../images/instructor/koshi/${teachers[0][name]}.jpg`}
+          src={`../../images/lesson/${id}.jpg`}
           alt={name}
         />
       </div>
