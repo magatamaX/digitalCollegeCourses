@@ -3,10 +3,6 @@ import Static1 from "./Static1";
 import Static2 from "./Static2";
 import Dynamic from "./Dynamic";
 import sortData from "./../helpers/sortData";
-import generateCourses from "./../helpers/generateCourses";
-import Api from "./../api/";
-
-const api = new Api();
 
 const App = props => {
   const [courses, setCourses] = useState([]);

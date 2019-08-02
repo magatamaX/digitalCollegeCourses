@@ -10,15 +10,12 @@ import sortData from "./helpers/sortData";
 const LIST_TARGET = document.querySelector(".js-course-list");
 const APP_TARGETS = Array.from(document.querySelectorAll(".js-course-app"));
 
-// api
-const api = new Api();
-
 const setComponents = async () => {
   // get data
   // const originalCourses = await api.get("/api/college/search");
-  const originalCourses = await api.get("/json/course.json");
-  const teachers = await api.get("/schoolnew/json/teachers_list.json");
-  const locations = await api.get("/schoolnew/json/location_list.json");
+  const originalCourses = await Api.get("/json/course.json");
+  const teachers = await Api.get("/schoolnew/json/teachers_list.json");
+  const locations = await Api.get("/schoolnew/json/location_list.json");
 
   // helper::開催情報を配列化します。
   const generatedCourses = generateCourses(originalCourses);
@@ -49,7 +46,7 @@ const setComponents = async () => {
   console.log(coursesLists);
 
   if (LIST_TARGET) {
-    const courses = coursesLists.reduce((arr, list, i) => ([...arr, ...list]), []);
+    const courses = coursesLists.reduce((arr, list, i) => ([...arr, ...list]), []) || [];
     console.log(courses);
     // render List
     render(
