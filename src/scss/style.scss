@@ -1177,19 +1177,42 @@ h3.application__section-title {
 }
 
 .base__content-select-btn-base {
-  margin-top: 20px
+	// display: none;
+	position: fixed;
+	@include bottom(-80px);
+	background: rgba(0,0,0,0.2);
+  width: 100%;
+  @include height(80px);
+  z-index: 100;
+  padding: 10px;
+  left: 0;
+  transition: bottom .5s ease-out;
+
+  &.active {
+    @include bottom(0);
+  }
+
+  &.disabled {
+    pointer-events: none;
+
+    a {
+      background-color: #707070;
+    }
+  }
 }
 
 .base__content-select-btn-base a {
   display: block;
   margin: 0 auto;
-  width: 100%;
-  background: #707070;
+  max-width: 920px;
+  height: 100%;
+  background-color: #07117B;
   text-align: center;
-  padding: 10px 0;
+  @include flexBase( $wrap: "nowrap", $direction:  "row", $justify: "center", $align: "center" );
   font-size: 1.6rem;
-  color: #fff;
-  cursor: default
+  color: #fff !important;
+  cursor: pointer;
+  transition: background-color .5s ease-out;
 }
 
 .base__content-select-btn-base a:hover {
@@ -2093,6 +2116,10 @@ h6.course__content {
 
 .base__sort_btn a:after {
   content: ''
+}
+
+body > footer {
+  padding-bottom: 100px !important;
 }
 
 footer {

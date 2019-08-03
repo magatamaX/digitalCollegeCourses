@@ -21,8 +21,8 @@ const APP_TARGETS = Array.from(document.querySelectorAll(".js-course-app"));
 
 const setComponents = async () => {
   // get data
-  const originalCourses = await Api.get("/api/college/search");
-  // const originalCourses = await Api.get("/json/course.json");
+  // const originalCourses = await Api.get("/api/college/search");
+  const originalCourses = await Api.get("https://www.fotopus9m.com/api/college/search");
   const teachers = await Api.get("/schoolnew/json/teachers_list.json");
   const locations = await Api.get("/schoolnew/json/location_list.json");
 
@@ -30,7 +30,8 @@ const setComponents = async () => {
   const courseIDs = originalCourses.map(c => c.講座id).join("_1,");
   console.log(courseIDs);
 
-  const remainings = await Api.getJSONP(`/api/college/remain/sid/${courseIDs}`);
+  // const remainings = await Api.getJSONP(`/api/college/remain/sid/${courseIDs}`);
+  const remainings = await Api.getJSONP(`https://fotopus.com/api/college/remain/sid/${courseIDs}`);
   console.log(remainings);
 
   // helper::開催情報を配列化します。

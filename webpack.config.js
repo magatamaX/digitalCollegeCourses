@@ -8,7 +8,7 @@ const ROOT_PATH_NAME = 'public';
 ** SCSS Setting
 ***************************************/
 const SCSS_ENTRY = {
-    'schoolnew/css/main': './src/scss/main.scss',
+    'schoolnew/css/style': './src/scss/style.scss',
 }
 const SCSS_SOURCE_MAP_STYLE = 'inline-source-map'; // 'inline-source-map', 'source-map', etc.
 
@@ -114,7 +114,8 @@ module.exports = [
                                 loader: 'sass-loader',
                                 options: {
                                     sourceMap: isDev,
-                                    url: false
+                                    url: false,
+                                    outputStyle: 'expanded'
                                 }
                             }
                         ]
