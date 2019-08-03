@@ -1123,19 +1123,55 @@ h3.application__section-title {
 }
 
 .base__content-select-btn-base {
-  margin-top: 20px;
+  position: fixed;
+  bottom: -80px;
+  background: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 80px;
+  z-index: 100;
+  padding: 10px;
+  left: 0;
+  -webkit-transition: bottom .5s ease-out;
+  transition: bottom .5s ease-out;
+}
+
+.base__content-select-btn-base.active {
+  bottom: 0;
+}
+
+.base__content-select-btn-base.disabled {
+  pointer-events: none;
+}
+
+.base__content-select-btn-base.disabled a {
+  background-color: #707070;
 }
 
 .base__content-select-btn-base a {
   display: block;
   margin: 0 auto;
-  width: 100%;
-  background: #707070;
+  max-width: 920px;
+  height: 100%;
+  background-color: #07117B;
   text-align: center;
-  padding: 10px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 1.6rem;
-  color: #fff;
-  cursor: default;
+  color: #fff !important;
+  cursor: pointer;
+  -webkit-transition: background-color .5s ease-out;
+  transition: background-color .5s ease-out;
 }
 
 .base__content-select-btn-base a:hover {
@@ -1220,6 +1256,19 @@ h3.application__section-title {
   font-size: 1.3rem;
   color: #06f;
   line-height: 1.5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .base__content-select-card-date > span {
@@ -1571,10 +1620,23 @@ h6.course__content {
   transition: all .1s;
   margin-bottom: 20px;
   width: 100%;
+  padding: 10px 0;
 }
 
 .course__content-select-card ul li {
   padding: 0 64px 0 0px;
+  line-height: 1.5;
+}
+
+.course__content-select-card ul li.course__content-select-card-womenOnly {
+  background: #e25e5e;
+  padding: 5px;
+  color: #fff;
+  white-space: nowrap;
+}
+
+.course__content-select-card ul li.course__content-select-card-womenOnly br {
+  display: none;
 }
 
 .course__content-select-card:hover {
@@ -1710,6 +1772,10 @@ h6.course__content {
 
 .base__sort_btn a:after {
   content: '';
+}
+
+body > footer {
+  padding-bottom: 100px !important;
 }
 
 footer {
@@ -5404,8 +5470,9 @@ a:hover .list-auction-img > img {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
         justify-content: space-between;
-    -ms-flex-item-align: end;
-        align-self: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     padding: 10px 20px 10px;
@@ -5435,10 +5502,11 @@ a:hover .list-auction-img > img {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
         justify-content: space-between;
-    -ms-flex-item-align: end;
-        align-self: flex-end;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
     padding: 10px 20px 10px;
     margin-bottom: 0;
   }
@@ -5680,6 +5748,9 @@ a:hover .list-auction-img > img {
   }
   .course__content-select-card ul li {
     padding: 0 15px;
+  }
+  .course__content-select-card ul li.course__content-select-card-womenOnly br {
+    display: inline;
   }
   .contact dl {
     display: -webkit-box;

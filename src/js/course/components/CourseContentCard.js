@@ -25,10 +25,15 @@ const CourseContentCard = ({
             </li>
           )}
           {courseInfo.女性限定 && (
-            <li className={`${classNamePrefix}__content-select-card-womenOnly`}>女性<br />限定</li>
+            <li className={`${classNamePrefix}__content-select-card-womenOnly`}>
+              女性
+              <br />
+              限定
+            </li>
           )}
           <li className={`${classNamePrefix}__content-select-card-date`}>
-            <span>{changeDateFormat(detail.date)}</span>（{detail.day}）{detail.time}
+            <span>{changeDateFormat(detail.date)}</span>（{detail.day}）
+            {detail.time}
           </li>
           <li className={`${classNamePrefix}__content-select-card-number`}>
             定員：{courseInfo.定員}／残数：{remaining.mark}

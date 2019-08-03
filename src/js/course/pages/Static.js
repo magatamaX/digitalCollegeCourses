@@ -16,31 +16,34 @@ const Static = ({ courses, remainings, onSort, sortType }) => {
     const html = window.document.documentElement;
     const scrollTop = body.scrollTop || html.scrollTop;
     return scrollTop + window.innerHeight;
-  }
+  };
 
-  const getTargetRectTop = (target) => {
+  const getTargetRectTop = target => {
     const rect = target.getBoundingClientRect();
     const body = window.document.body;
     const html = window.document.documentElement;
     const scrollTop = body.scrollTop || html.scrollTop;
     return rect.top + scrollTop;
-  }
+  };
 
   useEffect(() => {
-    window.addEventListener("scroll", () => {
-      setListOffsetTop(getTargetRectTop(listEl.current))
-      setScrollBottom(getScrollBottom());
-    }, false);
+    window.addEventListener(
+      "scroll",
+      () => {
+        setListOffsetTop(getTargetRectTop(listEl.current));
+        setScrollBottom(getScrollBottom());
+      },
+      false
+    );
   }, []);
 
   useEffect(() => {
-
-    if ( scrollBottom > listOffsetTop + 200 ) {
+    if (scrollBottom > listOffsetTop + 200) {
       setShowEntryButton(true);
     } else {
       setShowEntryButton(false);
     }
-  }, [scrollBottom, listOffsetTop])
+  }, [scrollBottom, listOffsetTop]);
 
   return (
     <div className="course__content-select" ref={listEl}>
@@ -88,7 +91,11 @@ const Static = ({ courses, remainings, onSort, sortType }) => {
         );
       })}
 
-      <EntryButton id={id} show={showEntryButton} href={`/school/entry.php?seminar_id=${id}`} />
+      <EntryButton
+        id={id}
+        show={showEntryButton}
+        href={`/school/entry.php?seminar_id=${id}`}
+      />
     </div>
   );
 };
