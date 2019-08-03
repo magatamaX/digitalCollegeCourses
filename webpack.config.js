@@ -8,7 +8,7 @@ const ROOT_PATH_NAME = 'public';
 ** SCSS Setting
 ***************************************/
 const SCSS_ENTRY = {
-    'css/main': './src/scss/main.scss',
+    'schoolnew/css/main': './src/scss/main.scss',
 }
 const SCSS_SOURCE_MAP_STYLE = 'inline-source-map'; // 'inline-source-map', 'source-map', etc.
 
@@ -17,7 +17,7 @@ const SCSS_SOURCE_MAP_STYLE = 'inline-source-map'; // 'inline-source-map', 'sour
 ** JS Setting
 ***************************************/
 const JS_ENTRY = {
-    'js/course': ['@babel/polyfill', './src/js/course.js'],
+    'schoolnew/js/course': ['@babel/polyfill', './src/js/course.js'],
     
 }
 const JS_SOURCE_MAP_STYLE = 'inline-source-map'; // 'inline-source-map', 'source-map', etc.
