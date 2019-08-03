@@ -40,15 +40,15 @@ const Right = ({ courseInfo }) => (
       </div>
 
       <div className="course__content-accordion">
-        <input id="tab-one" type="checkbox" name="tabs" />
-        <label htmlFor="tab-one">確認事項</label>
+        <input id={`${courseInfo.講座id}__1`} type="checkbox" name="tabs" />
+        <label htmlFor={`${courseInfo.講座id}__1`}>確認事項</label>
         <div className="course__content-accordion-content">
           <p>{courseInfo.料金注記}</p>
         </div>
       </div>
       <div className="course__content-accordion">
-        <input id="tab-two" type="checkbox" name="tabs" />
-        <label htmlFor="tab-two">カメラ</label>
+        <input id={`${courseInfo.講座id}__2`} type="checkbox" name="tabs" />
+        <label htmlFor={`${courseInfo.講座id}__2`}>カメラ</label>
         <div className="course__content-accordion-content">
           <div>{setBreak(courseInfo.講座注記)}</div>
         </div>

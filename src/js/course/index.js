@@ -21,18 +21,18 @@ const PREFECTURES_TARGET = document.querySelector(".js-course-prefectures");
 
 const setComponents = async () => {
   // get data
-  const originalCourses = await Api.get("/api/college/search");
-  // const originalCourses = await Api.get(
-  //   "https://www.fotopus9m.com/api/college/search"
-  // );
+  // const originalCourses = await Api.get("/api/college/search");
+  const originalCourses = await Api.get(
+    "https://www.fotopus9m.com/api/college/search"
+  );
   const teachers = await Api.get("/schoolnew/json/teachers_list.json");
   const locations = await Api.get("/schoolnew/json/location_list.json");
 
   // get all courseIDs
   const courseIDs = originalCourses.map(c => c.講座id).join("_1,");
 
-  // const remainings = await Api.getJSONP(`https://www.fotopus9m.com/api/college/remain/sid/${courseIDs}`);
-  const remainings = await Api.getJSONP(`/api/college/remain/sid/${courseIDs}`);
+  const remainings = await Api.getJSONP(`https://www.fotopus9m.com/api/college/remain/sid/${courseIDs}`);
+  // const remainings = await Api.getJSONP(`/api/college/remain/sid/${courseIDs}`);
 
   // helper::開催情報を配列化します。
   const generatedCourses = generateCourses(originalCourses);

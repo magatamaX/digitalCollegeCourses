@@ -11,8 +11,8 @@
 // }
 
 const displayRemainingNumber = (id, capacity, arr) => {
-  const remainder =
-    arr.filter(data => data.id === id)[0]["remainder"] || "null";
+  const remaining = arr.filter(data => data.id === id)[0];
+  const remainder = (remaining && remaining.remainder) || "null";
 
   if (remainder === "null") {
     // 残数 講座登録前
