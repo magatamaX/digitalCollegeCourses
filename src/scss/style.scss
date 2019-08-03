@@ -1399,7 +1399,8 @@ h3.application__section-title {
 .base__content-select-card-date {
   font-size: 1.3rem;
   color: #06f;
-  line-height: 1.5
+  line-height: 1.5;
+  @include flexBase( $wrap: "nowrap", $direction:  "row", $justify: "flex-start", $align: "center" )
 }
 
 @media screen and (min-width: 481px) {
@@ -1910,7 +1911,7 @@ h6.course__content {
     display: flex;
     -webkit-box-pack: justify;
     justify-content: space-between;
-    align-self: flex-end;
+    align-items: center;
     flex-wrap: wrap;
     padding: 10px 20px 10px;
     margin-bottom: 0
@@ -1932,16 +1933,35 @@ h6.course__content {
   -webkit-transition: all .1s;
   transition: all .1s;
   margin-bottom: 20px;
-  width: 100%
+  width: 100%;
+  @include pd(10px 0);
 }
 
 .course__content-select-card ul li {
-  padding: 0 64px 0 0px
+  padding: 0 64px 0 0px;
+  line-height: 1.5;
+
+  &.course__content-select-card-womenOnly {
+    background: #e25e5e;
+    padding: 5px;
+    color: #fff;
+    white-space: nowrap;
+
+    br {
+      display: none;
+    }
+  }
 }
 
 @media screen and (min-width: 769px) {
   .course__content-select-card ul li {
-    padding: 0 15px
+    padding: 0 15px;
+
+    &.course__content-select-card-womenOnly {
+      br {
+        display: inline;
+      }
+    }
   }
 }
 
@@ -1952,7 +1972,7 @@ h6.course__content {
 .course__content-select-card-date {
   font-size: 1.3rem;
   color: #06f;
-  line-height: 1.5
+  line-height: 1.5;
 }
 
 @media screen and (min-width: 481px) {
@@ -2014,8 +2034,8 @@ h6.course__content {
     display: flex;
     -webkit-box-pack: justify;
     justify-content: space-between;
-    align-self: flex-end;
-    flex-wrap: wrap;
+    align-items: center;
+    flex-wrap: nowrap;
     padding: 10px 20px 10px;
     margin-bottom: 0
   }
