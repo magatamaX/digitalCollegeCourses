@@ -19,6 +19,22 @@ const setComponents = async () => {
   const teachers = await Api.get("/schoolnew/json/teachers_list.json");
   const locations = await Api.get("/schoolnew/json/location_list.json");
 
+  //   console.log(originalCourses);
+  //   const courseIDs = originalCourses.map(c => c.講座id).join(",");
+  //   console.log(courseIDs);
+
+  //   let jsonp;
+  // try {
+  //   console.log("try")
+  //   jsonp = await Api.getJSONP(`https://fotopus.com/api/college/remain/sid/${courseIDs}`);
+  // } catch(e) {
+  //   console.log("cagagatgf")
+  //   console.log(e);
+  //   jsonp = []
+  // }
+  // // const jsonp = await Api.getJSONP(`/api/college/remain/sid/${courseIDs}`) || []
+  // console.log(jsonp)
+
   // helper::開催情報を配列化します。
   const generatedCourses = generateCourses(originalCourses);
 
