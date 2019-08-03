@@ -1,0 +1,107 @@
+<!doctype html>
+<!--[if lt IE 9]><html class="lt-ie9 ie8" lang="ja"><![endif]-->
+<!--[if gte IE 9]><!--><html lang="ja"><!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>カレンダー｜デジタルカレッジ 写真講座｜Fotopus｜オリンパス</title>
+<meta name="author" content="Olympus Corporation">
+<meta name="keywords" content="デジタルカレッジ,カレンダー,写真教室,OLYMPUS,オリンパス">
+<meta name="description" content="オリンパス デジタルカレッジの、被写体・テーマ別撮影講座のスケジュールが一目で分かるカレンダーです。">
+<meta name="copyright" content="Copyright Olympus Corporation">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--OGP-->
+<meta property="og:title" content="カレンダー｜デジタルカレッジ 写真講座｜Fotopus｜オリンパス">
+<meta property="og:description" content="オリンパス デジタルカレッジの、被写体・テーマ別撮影講座のスケジュールが一目で分かるカレンダーです。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://fotopus.com/school/forest/calendar/">
+<meta property="og:image" content="https://fotopus.com/school/common/images/ogImage.jpg">
+<meta property="og:site_name" content="写真投稿コミュニティ Fotopus（フォトパス）｜オリンパス">
+<meta property="fb:app_id" content="482220478462760">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@olympuspenstyle">
+<!--/OGP-->
+<link type="text/css" rel="stylesheet" href="/common/css/style.css">
+<link type="text/css" rel="stylesheet" href="/shr/css/style-responsive.css">
+<link type="text/css" rel="stylesheet" href="/common/css/layout.css">
+<link type="text/css" rel="stylesheet" href="/school/common/css/common.css">
+<link type="text/css" rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+<link type="text/css" rel="stylesheet" href="/school/common/css/print.css" media="print">
+<link type="text/css" rel="stylesheet" href="/school/forest/calendar/css/index.css">
+
+<link rel="stylesheet" type="text/css" href="/shr/css/fotopus-layout.css" media="screen,tv,print">
+</head>
+<!--[if lt IE 9]>
+<script type="text/javascript" src="/top/js/html5shiv.js"></script>
+<![endif]-->
+<body>
+<div id="wrapper">
+<header id="top">
+<?php include('/virtual/ssl/common/include/fotopus_header1.html'); ?>
+<div class="cont">
+
+<div class="copy">
+
+</div>
+<!-- /.copy -->
+<div class="topicPath clearfix"> <a href="http://olympus-imaging.jp/">ホーム</a> ＞ <a href="/">Fotopus</a> ＞ <a href="/school/">デジタルカレッジ 写真講座</a> ＞<h1>カレンダー</h1>
+</div>
+<!-- /.topicPath --> 
+</div>
+<!-- /.cont --> 
+</header>
+
+<div class="wide-wrapper">
+<?php include('/virtual/ssl/school/common/include/college_menu.html'); ?>
+<div class="main_img_theme clearfix">
+<div class="main_img_right">
+<img alt="" src="/school/forest/calendar/images/calendar.png">
+</div>
+<div class="main_img_left">
+<h1>被写体・テーマ別撮影講座<span class="main_title_m">カレンダー</span></h1>
+</div>
+</div>
+<!-- /.wide-wrapper -->
+<?php include('/virtual/ssl/school/common/include/sns_btn.html'); ?>
+</div>
+
+<!-- /.wide-wrapper -->
+
+<div class="contents-wrapper">
+<p class="explain">被写体・テーマ別撮影講座のスケジュールが一目で分かるカレンダーです。</p>
+</div>
+<!-- /. contents-wrapper -->
+
+<div id="clndr">
+<div class="clndr-grid"></div>
+</div>
+
+<div class="contents-wrapper">
+<?php include('/virtual/ssl/school/common/include/contact.html');?>
+</div>
+<!-- /. contents-wrapper -->
+
+<div class="cont footer_wrap">
+<?php include('/virtual/ssl/common/include/footer_school.html'); ?>
+</div>
+<!-- /#wrapper -->
+
+<script type="text/javascript" src="/shr/js/jquery.js"></script> 
+<script type="text/javascript" src="/shr/js/jquery-ui-1.9.2.custom.js"></script> 
+<script type="text/javascript" src="/shr/js/jquery.cookie.js"></script> 
+<script type="text/javascript" src="/shr/js/jquery.init.js"></script> 
+<script type="text/javascript" src="/school/common/js/common.js"></script>
+<script type="text/javascript" src="/school/forest/calendar/js/moment.min.js"></script>
+<script type="text/javascript" src="/school/forest/calendar/js/underscore-min.js"></script>
+<script type="text/javascript" src="/school/forest/calendar/js/clndr.js"></script>
+<script>
+$(document).ready(function(){
+	$('#clndr').clndr();
+});
+</script>
+<script type="text/javascript" src="/school/forest/calendar/js/japanese-holidays.js"></script>
+<script type="text/javascript" src="/school/common/js/jquery.matchHeight.js"></script>
+<script type="text/javascript" src="/school/forest/calendar/js/data.js"></script>
+<script type="text/javascript" src="/shr/js/fotopus-layout.js"></script>
+</body>
+</html>

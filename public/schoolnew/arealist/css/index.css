@@ -1,0 +1,54 @@
+﻿@charset "UTF-8";
+.firstdate:before {
+content: "（";
+}
+.firstdate:after {
+content: "）";
+}
+.firstdate{
+before:"（";
+after: "）";
+}
+.seconddate:before {
+content: "（";
+}
+.seconddate:after {
+content: "）";
+}
+.seconddate{
+before:"（";
+after: "）";
+}
+.thirddate:before {
+content: "（";
+}
+.thirddate:after {
+content: "）";
+}
+.thirddate{
+before:"（";
+after: "）";
+}
+.fourthdate:before {
+content: "（";
+}
+.fourthdate:after {
+content: "）";
+}
+.fourthdate{
+before:"（";
+after: "）";
+}
+.fifthdate:before {
+content: "（";
+}
+.fifthdate:after {
+content: "）";
+}
+.fifthdate{
+before:"（";
+after: "）";
+}
+
+
+

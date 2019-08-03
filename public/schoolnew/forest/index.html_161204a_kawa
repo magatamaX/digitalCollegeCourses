@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="ie6" lang="ja"> <![endif]-->
+<!--[if IE 7]> <html class="ie7" lang="ja"> <![endif]-->
+<!--[if IE 8]> <html class="ie8" lang="ja"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="ja"> <!--<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=920px">
+<meta http-equiv="Content-Style-Type" content="text/css">
+<meta http-equiv="Content-Script-Type" content="text/javascript">
+<meta name="author" content="OLYMPUS IMAGING CORP" />
+<meta name="robots" content="index, follow" />
+<meta name="Keywords" content="写真,講座,教室,撮影講座,写真撮影会,撮影会,デジカメ講座,写真セミナー,デジタル一眼レフカメラ使い方,コンパクトデジタルカメラ使い方,デジタル一眼レフ使い方,コンパクトデジカメ使い方,デジタルカレッジ,ズイコ－クラブ,ZUIKO CLUB,ZUIKO,ズイコー,デジタルカメラ,カメラ,E-3,E-420,E-520,E-620,E-P1,E3,E420,E520,E620,EP1,OLYMPUS,オリンパス" />
+<meta name="Description" content="オリンパス デジタルカレッジ（写真講座・教室）は、写真撮影の初心者が上級者へとステップアップしていけるよう、コンパクトデジタルカメラ、デジタル一眼レフカメラ、パソコンを使った写真講座を幅広くご用意しました。プロカメラマンから直接指導を受けられる講座や、オリンパスインストラクターが丁寧に指導する講座まで、充実の内容で皆様のご参加をお持ちいたしております。" />
+<meta name="copyright" content="Copyright OLYMPUS IMAGING CORP. All Rights Reserved." />
+<title>PhotoForest （フォトフォレスト）｜デジタルカレッジ 写真講座｜Fotopus｜オリンパス</title>
+<link rel="stylesheet" type="text/css" href="/common/css/style.css" />
+<link rel="stylesheet" type="text/css" href="/shr/css/style-responsive.css" />
+<link rel="stylesheet" href="/school/forest/css/index.css" type="text/css" media="screen,print" />
+<link rel="stylesheet" href="/school/common/css/dc_menu.css" />
+<!--[if lt IE 9]>
+<script type="text/javascript" src="/top/js/html5shiv.js"></script>
+<link href="/school/common/css/index_ie.css" rel="stylesheet" type="text/css" />
+<link href="/school/common/css/dc_dropdown.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+</head>
+
+<body>
+<div id="wrapper">
+<div class="cont">
+<header id="top">
+<?php include('/virtual/www/common/include/header01.html');
+include('/virtual/www/common/include/headerMenu01.html'); ?>
+<div class="copy">
+<p><span>見つける・つながる・楽しむ！写真投稿コミュニティ</span>「Fotopus」</p>
+</div>
+<!-- /.copy -->
+<div class="topicPath clearfix">
+<p><a href="http://olympus-imaging.jp/">ホーム</a> &gt; <a href="/">Fotopus</a> &gt; <a href="/school/">デジタルカレッジ 写真講座</a> &gt; </p><h1>PhotoForest （フォトフォレスト）</h1>
+</div>
+<!-- /.topicPath -->
+</header>
+
+
+<nav id="maxWidthNav">
+</nav>
+
+<section class="sec01">
+<p><img src="/school/forest/images/mainImg.png" alt="PhotoForest （フォトフォレスト）：豊富な撮影講座から学びたい人へ。"></p>
+<div class="secInner cf">
+<div class="secInnerLeft">
+<p><img src="/school/forest/images/img_01.jpg" alt=""></p>
+</div><!-- /.secInnerLeft -->
+<div class="secInnerRight">
+<h3 class="innerLead">豊富な撮影ジャンルから講座を選べる！学べる！楽しめる！</h3>
+<p>Photo Forestでは、楽しみながら撮影の腕を磨ける講座をご用意しました。撮影でさまざまな被写体やシチュエーションにチャレンジしたり、講義で知識を深めたりしてレベルアップしていきましょう。初心者から上級者まで、自分に合った講座を選んでフォトライフを楽しみましょう！</p>
+</div><!-- /.secInnerRight -->
+</div><!-- /.secInner -->
+</section><!-- /.sec01 -->
+
+<section class="sec02">
+<div class="content-header1">
+<h2>基礎講座<span>撮影の基礎、撮影技法の基礎を学ぶ講座です。</span></h2>
+</div>
+<div class="secInner cf">
+<div class="secInnerLeft">
+<h3 class="innerLead">撮り方の基本を学ぼう！写真基礎講座楽しめる！</h3>
+<p class="innerLead2">写真の基礎となる露出（絞りやシャッター速度）や写真表現を学びます。</p>
+<p>じっくり確実に身につけたいなら5回講座、スケジュールに合わせて選びたいなら「撮り方講座入門編」＋「撮りながら学ぶ～撮影入門実践編」の組み合わせがおすすめです。</p>
+</div><!-- /.secInnerLeft -->
+<div class="secInnerRight">
+<p><img src="/school/forest/images/img_02.jpg" alt=""></p>
+</div><!-- /.secInnerRight -->
+</div><!-- /.secInner -->
+
+<div class="btnBox cf">
+<div class="btnBoxLeft">
+<p class="btnBoxTitle">スケジュールに合わせて</p>
+<div class="btnBoxLeftInner btnBoxInner">
+<p><a href="/school/forest/howtotake/#beginner">一眼カメラ撮り方講座入門編</a></p>
+<p><a href="/school/forest/howtotake/#study">撮りながら学ぶ<br>
+～撮り方入門撮影実践講座～</a></p>
+</div><!-- /.btnBoxLeftInner -->
+</div><!-- /.btnBoxLeft -->
+<div class="btnBoxRight">
+<p class="btnBoxTitle">じっくり学びたい方へ</p>
+<div class="btnBoxRightInner btnBoxInner">
+<p><a href="/school/forest/howtotake/#5times">一眼カメラ撮り方講座入門<br>
+&amp;実践5回講座</a></p>
+</div><!-- /.btnBoxRightInner -->
+</div><!-- /.btnBoxRight -->
+</div><!-- /.btnBox -->
+
+</section><!-- /.sec02 -->
+
+<div class="moreLesson">更にレベルアップをはかりたい方は・・・</div>
+
+<section class="sec03">
+<div class="content-header2">
+<h2>実践講座<span>撮影実践をまじえて学ぶ講座です。</span></h2>
+</div>
+<div class="secInner cf">
+<div class="secInnerLeft">
+<h3 class="innerLead">さまざまな被写体の撮り方を学ぼう！撮影実践講座</h3>
+<p class="innerLead2">撮り方講座実践編を何度か受講し、更にレベルアップを図りたいかたへ。</p>
+<p>繰り返し受講してレベルアップしたい！何度も講座を楽しみたい！そんな皆様に中級者向けの講座をご用意しました。</p>
+</div><!-- /.secInnerLeft -->
+<div class="secInnerRight">
+<p><img src="/school/forest/images/img_03.jpg" alt=""></p>
+</div><!-- /.secInnerRight -->
+</div><!-- /.secInner -->
+
+<div class="btnBox cf">
+<div class="btnBoxLeft">
+<div class="btnBoxLeftInner btnBoxInner">
+<p><a href="/school/forest/technique/">撮り方講座実践編</a></p>
+<ul>
+<li>・お花の撮り方講座</li>
+<li>・動くものの撮り方講座</li>
+<li>・スナップの撮り方講座</li>
+<li>・テーブルフォトの撮り方講座</li>
+<li>・ポートレートの撮り方講座</li>
+<li>・花火の撮り方講座</li>
+<li>・風景の撮り方講座</li>
+<li>・フラッシュ&amp;ライティング</li>
+<li>・組み写真の撮り方講座</li>
+<li>・モノクロ写真の撮り方講座</li>
+</ul>
+</div><!-- /.btnBoxLeftInner -->
+</div><!-- /.btnBoxLeft -->
+<div class="btnBoxRight">
+<div class="btnBoxRightInner btnBoxInner">
+<p><a href="/school/forest/technique2/">レベルアップ！撮り方講座実践編</a></p>
+<ul>
+<li>・ポートレートの撮り方講座</li>
+<li>・スナップの撮り方講座</li>
+<li>・組写真の撮り方講座</li>
+</ul>
+</div><!-- /.btnBoxRightInner -->
+</div><!-- /.btnBoxRight -->
+</div><!-- /.btnBox -->
+
+
+
+<div class="secInner cf">
+<div class="secInnerLeft">
+<h3 class="innerLead">表現力を身につけ写真を楽しもう！プロの使いこなし講座</h3>
+<p class="innerLead2">プロカメラマンのエッセンスを学びたい方におすすめのラインナップです。</p>
+<p>繰り返し受講してレベルアップしたい！何度も講座を楽しみたい！そんな皆様に中級者向けの講座をご用意しました。じっくり確実に身につけたいなら5回講座、スケジュールに合わせて選びたいなら「撮り方講座入門編」＋「撮りながら学ぶ～撮影入門実践編」の組み合わせがおすすめです。</p>
+</div><!-- /.secInnerLeft -->
+<div class="secInnerRight">
+<p><img src="/school/forest/images/img_04.jpg" alt=""></p>
+</div><!-- /.secInnerRight -->
+</div><!-- /.secInner -->
+
+<div class="btnBox2">
+<ul class="cf">
+<li><a href="/school/forest/creative/#omdEm1">プロカメラマンから学ぶ<br>
+E-M1使いこなし術</a></li>
+<li><a href="/school/forest/creative/#viewer3">プロカメラマンから学ぶ <br>
+RAW現像&amp;画像編集</a></li>
+<li><a href="/school/forest/creative/#flash">プロカメラマンから学ぶ<br>
+フラッシュ活用講座</a></li>
+</ul>
+</div><!-- /.btnBox -->
+
+</section><!-- /.sec03 -->
+
+<section class="sec04">
+<div class="content-header3">
+<h2>レンズ講座<span>それぞれのレンズの特徴や、レンズを変えて写真がどう変わるのかを学びます。</span></h2>
+</div>
+<div class="secInner cf">
+<div class="secInnerLeft">
+<h3 class="innerLead">写真を楽しみながら上達しよう！</h3>
+<p class="innerLead2">プロカメラマンの指導のもと、各地でざまざまな被写体にチャレンジ！</p>
+<p>撮影に加えて、講評風景をUstream配信する1回講座と、参加型の講評会がある2回講座があります。</p>
+</div><!-- /.secInnerLeft -->
+<div class="secInnerRight">
+<p><img src="/school/forest/images/img_06.jpg" alt=""></p>
+</div><!-- /.secInnerRight -->
+</div><!-- /.secInner -->
+
+<div class="btnBox2">
+<ul class="cf">
+<li><a href="/school/forest/lens/#lensBeginner">レンズのきほんレッスン</a></li>
+<li><a href="/school/forest/lens/#lensTokyo">レンズを使いこなそう座学講座（東京）</a></li>
+<li class="thirdChild"><a href="/school/forest/lens/#lensOsaka">レンズを使いこなそう座学&amp;実習講座（大阪）</a></li>
+<li><a href="/school/forest/lens/#lensphotographing">レンズ撮影会</a></li>
+</ul>
+</div><!-- /.btnBox -->
+
+</section><!-- /.sec05 -->
+
+
+<section class="sec05">
+<div class="content-header4">
+<h2>撮影会</h2>
+</div>
+<div class="secInner cf">
+<div class="secInnerLeft">
+<h3 class="innerLead">写真を楽しみながら上達しよう！</h3>
+<p class="innerLead2">プロカメラマンの指導のもと、各地でざまざまな被写体にチャレンジ！</p>
+<p>撮影に加えて、講評風景をUstream配信する1回講座と、参加型の講評会がある2回講座があります。</p>
+</div><!-- /.secInnerLeft -->
+<div class="secInnerRight">
+<p><img src="/school/forest/images/img_05.jpg" alt=""></p>
+</div><!-- /.secInnerRight -->
+</div><!-- /.secInner -->
+
+<div class="btnBox2">
+<ul class="cf">
+<li><a href="/school/forest/photographing/">撮影会</a></li>
+</ul>
+</div><!-- /.btnBox -->
+
+</section><!-- /.sec05 -->
+
+<section class="contactus">
+<h2>お問い合わせ</h2>
+
+<div class="contactusInner inner01">
+<h3 class="innerLead">デジタルカレッジに関するお問い合わせ</h3>
+<dl class="cf">
+<dt>TEL：</dt><dd>0570-055-800（ナビダイヤル）</dd>
+<dt>受付時間：</dt><dd> 9：00～12：00、13：00～17：30（日、祝日、弊社休業日を除く）</dd>
+<dt>E-mail：</dt><dd> <a href="mailto:fotopus@olympus-imaging.com">fotopus@olympus-imaging.com</a></dd>
+<dd class="noFloat"><span class="colorRed">※迷惑メール対策設定をされている方は、</span><a onClick="window.open('/etc/notes/mail_notice.html','mail_notice','status=yes,scrollbars=yes,resizable=yes,width=700,height=650')" href="javascript:void(0)">こちらのご注意</a><span class="colorRed">をご覧ください。</span></dd>
+</dl>
+</div><!-- /.contactusInner -->
+
+<div class="contactusInner inner02">
+<h3 class="innerLead">その他のお問い合わせ</h3>
+<dl class="cf">
+<dt>・会員登録、製品登録、写真コミュニティ フォトパスに関するお問合せ</dt>
+<dd class="noFloat">下記事務局までメールでお問い合わせください。</dd>
+<dd class="noFloat">オリンパス フォトパス事務局：<a href="mailto:fotopus@olympus-imaging.com">fotopus@olympus-imaging.com</a></dd>
+<dd class="noFloat">※ お問合せいただいたメールに対するご回答は、弊社の休業日等により翌営業日または翌々営業日になる場合がございますので、予めご了承お願い致します。</dd>
+<dd class="noFloat">※ 迷惑メール対策設定をされている方は、<a onClick="window.open('/etc/notes/mail_notice.html','mail_notice','status=yes,scrollbars=yes,resizable=yes,width=700,height=650')" href="javascript:void(0)">こちらのご注意</a>をご覧ください。</dd>
+<dt>・製品＆修理に関するお問合せ</span>&#12288;<a href="http://www.olympus.co.jp/jp/support/cs/digital/contact.html">&gt;&gt; 詳細はこちら</a></dt>
+<dt>・オンラインショップに関するお問合せ</span>&#12288;<a href="https://shop.olympus-imaging.jp/html/inquire.html">&gt;&gt; 詳細はこちら</a></dt>
+<dt>・ショールーム &#12288;<a href="http://olympus-imaging.jp/event_campaign/olympusplaza/tokyo/">&gt;&gt; 詳細はこちら</a></dt>
+<dt>・オリンパス国内拠点&#12288;<a href="http://www.olympus.co.jp/jp/contact/list/office.cfm?co=2">&gt;&gt; 詳細はこちら</a></dt>
+</dl>
+
+</div><!-- /.contactusInner -->
+
+
+
+</section><!-- /.contactus -->
+
+
+<?php include('/virtual/www/common/include/footer02.html'); ?>
+</div>
+<!-- / #wrapepr -->
+<script type="text/javascript" src="/shr/js/jquery.js"></script>
+<script type="text/javascript" src="/shr/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/shr/js/jquery.init.js"></script>
+<script type="text/javascript" src="/school/common/js/dc_menu.js"></script>
+
+
+<script type="text/javascript"> 
+<!--
+$(document).ready(function(){
+	$("li#DC_dropdownBox").hover(
+		function(){
+			$("p a",$(this)).addClass("act");
+			$("div#dropMenu",$(this)).show();
+		},
+		function(){
+			$("p a",$(this)).removeClass("act");
+			$("div#dropMenu",$(this)).hide();
+		}
+	);
+	
+
+});
+//-->
+</script>
+</body>
+</html>

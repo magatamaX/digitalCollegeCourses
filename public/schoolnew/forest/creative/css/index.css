@@ -1,0 +1,204 @@
+@charset "utf-8";
+/* CSS Document */
+
+body.loading{
+opacity:0.5;
+filter: alpha(opacity=50);        /* ie lt 8 */
+-ms-filter: "alpha(opacity=50)";  /* ie 8 */
+-moz-opacity:0.5;                 /* FF lt 1.5, Netscape */
+-khtml-opacity: 0.5;              /* Safari 1.x */
+}
+
+.DC_detailSystem #DC_detailList{
+margin-bottom:30px;
+}
+.DC_detailSystem #DC_detailList ul{
+overflow:hidden;
+margin:0;
+}
+.DC_detailSystem #DC_detailList li{
+float:left;
+width:auto;
+font-weight:bold;
+margin-left:30px;
+}
+#DC_detailIntro h2{
+margin-bottom:20px;
+}
+#DC_detailContent{
+margin-bottom:20px;
+}
+#DC_detailContent .AboutLesson01,
+#DC_detailContent .AboutLesson02,
+#DC_detailContent .AboutLesson03,
+#DC_detailContent .AboutLesson04,
+#DC_detailContent .AboutLesson05,
+#DC_detailContent .AboutLesson06{
+clear:both;
+}
+#DC_detailContent .AboutLessonInner{
+border:1px solid #e8e8e8;
+border-top:none;
+padding:20px 20px 10px 20px;
+text-align:left;
+margin:0 2px 0 5px;
+}
+#DC_detailContent .AboutLessonInner p{
+margin-bottom:20px;
+}
+#DC_detailContent .AboutLessonInner .AboutLessonInnerLeft{
+float:left;
+width:65%;
+}
+#DC_detailContent .AboutLessonInner .AboutLessonInnerRight{
+float:right;
+}
+#DC_detailContent .AboutLessonInner .AboutLessonInnerRight h5{
+margin-bottom:10px;
+}
+#DC_detailContent .AboutLessonInner .AboutLessonInnerRight ul{
+float:left;
+}
+#DC_detailContent .AboutLessonInner .AboutLessonInnerRight ul.first{
+margin-right:20px;
+}
+#DC_detailContent .AboutLessonInner .iconK,
+#DC_detailContent .AboutLessonInner .iconS{
+display:inline-block;
+*display:inline;
+*zoom:1;
+width:15px;
+height:15px;
+vertical-align:middle;
+}
+#DC_detailContent .mirrorlessInfo {
+    height: 112px;
+    margin-bottom: 20px;
+    width: 726px;
+}
+/*
+#DC_detailContent .mirrorlessInfo img:hover {
+    opacity: 0.8;
+}
+*/
+#DC_detailContent #courseInfo {
+
+}
+#DC_detailContent .mirrorlessFirst {
+    margin: 0 auto;
+    padding: 10px;
+    text-align: left;
+}
+#DC_detailContent .mirrorlessFirst .studyInfo{
+padding-top:10px;
+border-top: 1px dotted #999999;
+}
+#DC_detailContent .mirrorlessFirst h4 {
+    background:none;
+    margin-bottom: 10px;
+    width: auto;
+}
+#DC_detailContent .mirrorlessFirst p, #DC_detailContent .mirrorlessFirst ul {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+#DC_detailContent .mirrorlessFirst .caution{
+margin-top:-1em;
+margin-left:2em;
+color:#333333;
+padding-left:1em;
+text-indent:-1em;
+border-bottom:none;
+}
+#DC_detailContent .mirrorlessFirst ul{
+margin-top:-1em;
+margin-left:2em;
+color:#333333;
+}
+#DC_detailContent .mirrorlessFirst li{
+padding-left:1em;
+text-indent:-1em;
+}
+#DC_detailContent .mirrorlessFirst .borderNone {
+    border-bottom: medium none;
+}
+#DC_detailContent .mirrorlessFirst p.DC_textRed {
+    border-bottom: 2px dashed #333333;
+}
+#DC_detailContent .mirrorlessFirst .rentCamera {
+    overflow: hidden;
+}
+#DC_detailContent .mirrorlessFirst .rentCamera p {
+    float: left;
+}
+#DC_detailContent .mirrorlessFirst .rentCamera p a img:hover {
+    opacity: 0.8;
+}
+#DC_detailContent .mirrorlessFirst .rentCamera dl {
+    float: right;
+    width: 55%;
+}
+#DC_detailContent .mirrorlessFirst02 {
+    margin: 0 auto;
+    padding: 10px;
+    text-align: left;
+}
+#DC_detailContent .mirrorlessFirst02 h4 {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border-bottom: 1px dotted #999999;
+    margin-bottom: 10px;
+    width: auto;
+}
+#DC_detailContent .mirrorlessFirst02 p, #DC_detailContent .mirrorlessFirst02 ul {
+    border-bottom: 1px dotted #999999;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+#DC_detailContent .mirrorlessFirst02 .borderNone {
+    border-bottom: medium none;
+}
+#DC_detailContent .mirrorlessFirst02 p.DC_textRed {
+    border-bottom: 2px dashed #333333;
+}
+#DC_detailContent .mirrorlessFirst02 .rentCamera {
+    overflow: hidden;
+}
+#DC_detailContent .mirrorlessFirst02 .rentCamera p {
+    float: left;
+}
+#DC_detailContent .mirrorlessFirst02 .rentCamera p a img:hover {
+    opacity: 0.8;
+}
+#DC_detailContent .mirrorlessFirst02 .rentCamera dl {
+    float: right;
+    width: 55%;
+}
+.schedule{
+clear:both;
+}
+.schedule table{
+width:700px;
+font-size:12px;
+margin:20px auto;
+}
+.schedule th{
+font-weight:bold;
+}
+.schedule .corcePlace{
+width:10%;
+}
+.schedule th,
+.schedule td{
+padding:5px;
+vertical-align:middle;
+text-align:left;
+}
+.schedule th.lens{
+width:25%;
+}
+.schedule tr{
+background:#f2f3ef;
+}
+
+
+

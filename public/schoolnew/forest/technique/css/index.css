@@ -1,0 +1,81 @@
+@charset "utf-8";
+/* CSS Document */
+
+body.loading{
+opacity:0.5;
+filter: alpha(opacity=50);        /* ie lt 8 */
+-ms-filter: "alpha(opacity=50)";  /* ie 8 */
+-moz-opacity:0.5;                 /* FF lt 1.5, Netscape */
+-khtml-opacity: 0.5;              /* Safari 1.x */
+}
+
+/*.DC_detailCourse .DC_detailCourseBox1L span{
+display:block;
+}
+*/
+#DC_detailList {
+position:relative;
+}
+#DC_detailList .DC_detailListHead{
+margin:0;
+}
+#DC_detailList .corsesubTitle{
+margin:20px 0 0;
+font-weight:bold;
+font-size:14px;
+}
+.btn_calendar{
+position:absolute;
+right:0;
+top:0;
+}
+.btn_calendar img:hover{
+    opacity: 0.8;
+}
+
+
+#course .mirrorlessInfo {
+    height: 112px;
+    margin-bottom: 20px;
+		margin-left:10px;
+    width: 726px;
+}
+#course #courseInfo {
+    display: none;
+		text-align:left;
+}
+#course .mirrorlessFirst {
+    margin: 0 auto;
+    padding: 10px;
+    text-align: left;
+}
+#course .mirrorlessFirst h4 {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border-bottom: 1px dotted #999999;
+    margin-bottom: 10px;
+    width: auto;
+}
+#course .mirrorlessFirst p, #course .mirrorlessFirst ul {
+    border-bottom: 1px dotted #999999;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+#course .mirrorlessFirst .borderNone {
+    border-bottom: medium none;
+}
+#course .mirrorlessFirst p.DC_textRed {
+    border-bottom: 2px dashed #333333;
+}
+#course .mirrorlessFirst .rentCamera {
+    overflow: hidden;
+}
+#course .mirrorlessFirst .rentCamera p {
+    float: left;
+}
+#course .mirrorlessFirst .rentCamera p a img:hover {
+    opacity: 0.8;
+}
+#course .mirrorlessFirst .rentCamera dl {
+    float: right;
+    width: 55%;
+}

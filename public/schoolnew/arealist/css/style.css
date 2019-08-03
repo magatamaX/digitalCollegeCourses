@@ -1,0 +1,128 @@
+/* mainImage */
+.main_img {
+    position: relative;
+    width: 100%;
+    background: url(/schoolnew/arealist/images/arealist_bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: -2;
+}
+.main_img:before {
+    position: absolute;
+    content: "";
+    width: 225px;
+    height: 210px;
+    bottom: 0;
+    right: 20px;
+    background: url(/schoolnew/arealist/images/arealist.svg) no-repeat;
+    background-size: 100%;
+    background-position: right 0 bottom 10px;
+ }
+.ie8 .main_img:before {
+    position: absolute;
+    content: "";
+    width: 225px;
+    height: 210px;
+    bottom: 0;
+    right: 20px;
+    background: url(/schoolnew/arealist/images/arealist.png) no-repeat;
+    background-size: 100%;
+    background-position: right 0 bottom 10px;
+}
+.base__mainimage-base {
+  background: url("/schoolnew/arealist/images/main_image_arealist-pc.jpg");
+  background-size: cover;
+  height: 207px
+}
+/* links */
+.arealist_link{
+	text-align: left;
+	letter-spacing: -1em;
+	margin-top: 10px;
+}
+.arealist_link li{
+	display: none;
+	width: 48%;
+	margin-right: 2%;
+	margin-bottom: 5px;
+	letter-spacing: normal;
+	vertical-align: top;
+}
+.arealist_link dl{
+	letter-spacing: -1em;
+}
+.arealist_link dt,
+.arealist_link dd{
+	display: inline-block;
+	letter-spacing: normal;
+}
+.arealist_link dt:before{
+	content: '▼';
+	font-size: 12px;
+}
+.arealist_link dd:before{
+	content: '｜';
+}
+.arealist_link dd{
+	display: none;
+}
+/* main */
+.arialist_all{
+	text-align: left;
+	max-width: 700px;
+	margin: 0 auto;
+}
+.arialist_all > div{
+	display: none;
+}
+h3{
+	margin-top: 30px;
+	margin-bottom: 10px;
+}
+.course li{
+	padding: 1em;
+}
+.course li:nth-child(2n+1){
+	background: #f9f9f9;
+}
+.course li:nth-child(2n){
+	background: #f1f1f1;
+}
+.ie8 .course li{
+	border: 1px solid #dcdcdc;
+	border-top: none;
+}
+.ie8 .course > li:first-child{
+	border-top: 1px solid #dcdcdc;
+}
+.link_static-course{
+	display: inline-block !important;
+	margin-right: 0 !important;
+}
+.arealist_link .link_static-course dd{
+	display: inline-block !important;
+}
+.arialist_all > div.static-course{
+	display: block !important;
+}
+.footer__content-accordion{
+  padding-top: 50px;
+}
+@media screen and (max-width: 960px){
+	.arialist_all{
+		max-width: none;
+		margin-left: 3%;
+		margin-right: 3%;
+	}
+	.arealist_link li{
+		width: 100%;
+		margin-right: 0;
+	}
+}
+@media screen and (max-width: 769px) {
+  .base__mainimage-base {
+    background: url("/schoolnew/arealist/images/main_image_arealist-sp.jpg");
+    background-size: cover;
+    height: 207px
+  }
+}

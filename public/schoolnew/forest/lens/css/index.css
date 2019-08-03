@@ -1,0 +1,308 @@
+@charset "utf-8";
+/* CSS Document */
+
+body.loading{
+opacity:0.5;
+filter: alpha(opacity=50);        /* ie lt 8 */
+-ms-filter: "alpha(opacity=50)";  /* ie 8 */
+-moz-opacity:0.5;                 /* FF lt 1.5, Netscape */
+-khtml-opacity: 0.5;              /* Safari 1.x */
+}
+#DC_detailList{
+margin-bottom:30px;
+}
+#DC_detailList ul{
+overflow:hidden;
+margin:0;
+}
+#DC_detailList li{
+float:left;
+width:auto;
+font-weight:bold;
+margin-left:30px;
+}
+#DC_detailContent{
+text-align:center;
+}
+#DC_detailIntro h2{
+margin-bottom:20px;
+}
+#DC_detailContent .mirrorlessInfo{
+width:726px;
+height:112px;
+margin-bottom:20px;
+}
+#DC_detailContent #courseInfo{
+
+}
+#DC_detailContent .mirrorlessFirst{
+margin:0 auto;
+text-align:left;
+padding:10px;
+padding-left:0px;
+}
+#DC_detailContent .mirrorlessFirst h4{
+background:none;
+width:auto;
+margin-bottom:10px;
+}
+#DC_detailContent .mirrorlessFirst p,
+#DC_detailContent .mirrorlessFirst ul{
+padding-bottom:10px;
+margin-bottom:10px;
+border-bottom:1px dotted #999999;
+}
+#DC_detailContent .mirrorlessFirst .caution{
+margin-top:-1em;
+padding-left:2em;
+}
+#DC_detailContent .mirrorlessFirst .borderNone{
+border-bottom:none;
+}
+#DC_detailContent .mirrorlessFirst p.DC_textRed{
+border-bottom:2px #333333 dashed;
+}
+#DC_detailContent .mirrorlessFirst .rentCamera{
+overflow:hidden;
+}
+#DC_detailContent .mirrorlessFirst .rentCamera p{
+float:left;
+}
+#DC_detailContent .mirrorlessFirst .rentCamera p a img:hover{
+opacity:0.8;
+}
+#DC_detailContent .mirrorlessFirst .rentCamera dl{
+float:right;
+width:55%;
+}
+#DC_detailContent .mirrorlessFirst02{
+margin:0 auto;
+text-align:left;
+padding:10px;
+}
+#DC_detailContent .mirrorlessFirst02 h4{
+background:none;
+border-bottom:1px dotted #999999;
+width:auto;
+margin-bottom:10px;
+}
+#DC_detailContent .mirrorlessFirst02 p,
+#DC_detailContent .mirrorlessFirst02 ul{
+padding-bottom:10px;
+margin-bottom:10px;
+border-bottom:1px dotted #999999;
+}
+#DC_detailContent .mirrorlessFirst02 .caution{
+padding-left:2em;
+}
+#DC_detailContent .mirrorlessFirst02 .borderNone{
+border-bottom:none;
+}
+#DC_detailContent .mirrorlessFirst02 p.DC_textRed{
+border-bottom:2px #333333 dashed;
+}
+#DC_detailContent .mirrorlessFirst02 .rentCamera{
+overflow:hidden;
+}
+#DC_detailContent .mirrorlessFirst02 .rentCamera p{
+float:left;
+}
+#DC_detailContent .mirrorlessFirst02 .rentCamera p a img:hover{
+opacity:0.8;
+}
+#DC_detailContent .mirrorlessFirst02 .rentCamera dl{
+float:right;
+width:55%;
+}
+#DC_detailContent .AboutLesson{
+clear:both;
+}
+#DC_detailContent .AboutLessonInner{
+border:1px solid #e8e8e8;
+border-top:none;
+padding:20px 20px 10px 20px;
+text-align:left;
+margin:0 2px 0 5px;
+}
+#DC_detailContent .AboutLessonInner p{
+margin-bottom:20px;
+}
+#DC_detailContent .AboutLessonInner .AboutLessonInnerLeft{
+float:left;
+overflow:hidden;
+}
+#DC_detailContent .AboutLessonInner .AboutLessonInnerLeft h5{
+margin-bottom:10px;
+}
+#DC_detailContent .AboutLessonInner .AboutLessonInnerLeft ul{
+float:left;
+margin-right:20px;
+}
+#DC_detailContent .AboutLessonInner .AboutLessonInnerRight{
+float:right;
+}
+#DC_detailContent .AboutLessonInner .AboutLessonInnerRight ul{
+
+}
+#DC_detailContent .AboutLessonInner .AboutLessonInnerRight li{
+margin-bottom:10px;
+}
+#DC_detailContent .AboutLessonInner .iconWomen{
+background:url(/school/common/images/iconWomen.gif) 0 0 no-repeat;
+text-indent:-99999px;
+display:inline-block;
+*display:inline;
+*zoom:1;
+width:15px;
+height:15px;
+vertical-align:middle;
+}
+#DC_detailContent .AboutLessonInner01{
+border:1px solid #e8e8e8;
+border-top:none;
+padding:20px 20px 40px 20px;
+text-align:left;
+margin:0 2px 0 5px;
+}
+#DC_detailContent .AboutLessonInner01 p{
+margin-bottom:20px;
+}
+#DC_detailContent .AboutLessonInner01 .AboutLessonInnerLeft{
+float:left;
+overflow:hidden;
+width:100%;
+}
+#DC_detailContent .AboutLessonInner01 .AboutLessonInnerLeft h5{
+margin-bottom:10px;
+}
+#DC_detailContent .AboutLessonInner01 .AboutLessonInnerLeft ul{
+float:left;
+margin-right:20px;
+}
+#DC_detailContent .AboutLessonInner01 .AboutLessonInnerRight{
+float:right;
+}
+#DC_detailContent .AboutLessonInner01 .AboutLessonInnerRight h5{
+margin-bottom:10px;
+}
+#DC_detailContent .AboutLessonInner01 .AboutLessonInnerRight ul{
+float:right;
+margin-bottom:20px;
+}
+#DC_detailContent .AboutLessonInner01 .AboutLessonInnerRight li{
+margin-bottom:10px;
+}
+#DC_detailContent .AboutLessonInner01 .AboutLessonInnerRight ul.first{
+margin-right:20px;
+}
+#DC_detailContent .AboutLessonInner01 .iconK,
+#DC_detailContent .AboutLessonInner01 .iconS{
+display:inline-block;
+*display:inline;
+*zoom:1;
+width:15px;
+height:15px;
+vertical-align:middle;
+}
+#DC_detailContent .AboutLessonInner01 .AboutLessonInnerLeft{
+float:left;
+overflow:hidden;
+width:65%;
+}
+#DC_detailContent .AboutLessonInner01 .AboutLessonInnerLeft h5{
+margin-bottom:10px;
+}
+#DC_detailContent .AboutLessonInner01 .AboutLessonInnerLeft ul{
+float:left;
+margin-right:20px;
+}
+#DC_detailContent .AboutLessonInner02{
+}
+#DC_detailContent .AboutLessonInner03{
+}
+.schedule{
+clear:both;
+}
+.schedule table{
+width:700px;
+font-size:12px;
+margin:20px auto;
+}
+.schedule .corcePlace{
+width:20%;
+}
+.schedule th,
+.schedule td{
+padding:5px;
+vertical-align:middle;
+text-align:left;
+}
+.schedule tr{
+background:#f2f3ef;
+}
+
+
+.schedule2{
+clear:both;
+}
+.schedule2 table{
+width:700px;
+font-size:12px;
+margin:20px auto;
+}
+.schedule2 .corcePlace{
+width:10%;
+}
+.schedule2 th,
+.schedule2 td{
+padding:5px;
+vertical-align:middle;
+text-align:left;
+}
+.schedule2 tr{
+background:#f2f3ef;
+}
+
+
+.schedule3{
+clear:both;
+}
+.schedule3 table{
+width:700px;
+font-size:12px;
+margin:20px auto;
+}
+.schedule3 .corcePlace{
+width:10%;
+}
+.schedule3 th,
+.schedule3 td{
+padding:5px;
+vertical-align:middle;
+text-align:left;
+}
+.schedule3 tr{
+background:#f2f3ef;
+}
+
+
+.schedule4{
+clear:both;
+}
+.schedule4 table{
+width:700px;
+font-size:12px;
+margin:20px auto;
+}
+.schedule4 .corcePlace{
+width:10%;
+}
+.schedule4 th,
+.schedule4 td{
+padding:5px;
+vertical-align:middle;
+text-align:left;
+}
+.schedule4 tr{
+background:#f2f3ef;
+}

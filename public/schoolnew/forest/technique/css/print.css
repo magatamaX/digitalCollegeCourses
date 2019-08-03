@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* CSS Document */
+#globalHeader,
+#navigation,
+#nlogin_form,
+#pageInfo,
+#Sidebar_b{
+display:none;
+}
+#courseInfo{
+display:block !important;
+}
+.schedule th,
+.schedule td{
+border:1px solid #CCCCCC !important;
+}
