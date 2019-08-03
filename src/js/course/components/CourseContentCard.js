@@ -24,6 +24,11 @@ const CourseContentCard = ({
               {courseInfo.都道府県}
             </li>
           )}
+          {courseInfo.女性限定 && (
+            <li className={`${classNamePrefix}__content-select-card-womenOnly`}>
+              {courseInfo.女性限定}
+            </li>
+          )}
           <li className={`${classNamePrefix}__content-select-card-date`}>
             <span>{changeDateFormat(detail.date)}</span>（{detail.day}）　
             {detail.time}

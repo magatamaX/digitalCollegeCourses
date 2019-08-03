@@ -28,7 +28,7 @@ const setComponents = async () => {
   const teachers = await Api.get("/schoolnew/json/teachers_list.json");
   const locations = await Api.get("/schoolnew/json/location_list.json");
 
-  console.log(originalCourses);
+  console.log(originalCourses.filter(d => d.女性限定 !== ''));
   const courseIDs = originalCourses.map(c => c.講座id).join("_1,");
   console.log(courseIDs);
 
