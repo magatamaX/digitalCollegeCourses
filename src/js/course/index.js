@@ -30,9 +30,7 @@ const setComponents = async () => {
   const courseIDs = originalCourses.map(c => c.講座id).join("_1,");
   console.log(courseIDs);
 
-  const remainings = await Api.getJSONP(
-    `https://fotopus.com/api/college/remain/sid/${courseIDs}`
-  );
+  const remainings = await Api.getJSONP(`/api/college/remain/sid/${courseIDs}`);
   console.log(remainings);
 
   // helper::開催情報を配列化します。
