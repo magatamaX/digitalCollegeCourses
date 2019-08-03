@@ -33,6 +33,7 @@ const Static = ({ courses, remainings, onSort, sortType }) => {
                 </li>
                 <li>
                   <CourseContentCard
+                    sortType={sortType}
                     classNamePrefix="base"
                     courseInfo={courseInfo}
                     remaining={displayRemainingNumber(

@@ -5,6 +5,7 @@ const CourseContentCard = ({
   courseInfo,
   remaining,
   classNamePrefix,
+  sortType,
   children
 }) => {
   // 開催日が空のものを除外する
@@ -18,6 +19,11 @@ const CourseContentCard = ({
     >
       {details.map(detail => (
         <ul key={detail.date}>
+          {(sortType && sortType === "day") && (
+            <li className={`${classNamePrefix}__content-select-card-place`}>
+              {courseInfo.都道府県}
+            </li>
+          )}
           <li className={`${classNamePrefix}__content-select-card-date`}>
             <span>{changeDateFormat(detail.date)}</span>（{detail.day}）　
             {detail.time}
