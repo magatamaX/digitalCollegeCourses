@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import changeDateFormat from "./../helpers/changeDateFormat";
-import SortButton from "./../components/SortButton";
-import EntryButton from "./../components/EntryButton";
+import SortButton from "../components/SortButton";
+import EntryButton from "../components/EntryButton";
+import CourseContentCard from "../components/CourseContentCard";
 
-const Static1 = ({ courses, onSort, sortType }) => {
+const Static = ({ courses, onSort, sortType }) => {
   const [id, setId] = useState("");
 
   return (
@@ -31,23 +31,16 @@ const Static1 = ({ courses, onSort, sortType }) => {
                   />
                 </li>
                 <li>
-                  <div className="base__content-select-card-base">
-                    <ul>
-                      <li className="base__content-select-card-date">
-                        <span>{changeDateFormat(courseInfo.開催日1)}</span>（
-                        {courseInfo.曜日1}）　{courseInfo.時間1}
-                      </li>
-                      <li className="base__content-select-card-number">
-                        定員：{courseInfo.定員}／残数：△
-                      </li>
-                      <li className="base__content-select-card-place">
-                        {courseInfo.会場1}
-                      </li>
+                  <CourseContentCard
+                    classNamePrefix="base"
+                    courseInfo={courseInfo}
+                  >
+                    {() => (
                       <li className="base__content-select-card-lecturer">
                         {courseInfo.講師}
                       </li>
-                    </ul>
-                  </div>
+                    )}
+                  </CourseContentCard>
                 </li>
               </ul>
             </label>
@@ -60,4 +53,4 @@ const Static1 = ({ courses, onSort, sortType }) => {
   );
 };
 
-export default Static1;
+export default Static;

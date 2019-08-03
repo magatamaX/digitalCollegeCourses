@@ -12,7 +12,9 @@ const APP_TARGETS = Array.from(document.querySelectorAll(".js-course-app"));
 
 const setComponents = async () => {
   // get data
-  const originalCourses = await Api.get("https://www.fotopus9m.com/api/college/search");
+  const originalCourses = await Api.get(
+    "https://www.fotopus9m.com/api/college/search"
+  );
   // const originalCourses = await Api.get("/json/course.json");
   const teachers = await Api.get("/schoolnew/json/teachers_list.json");
   const locations = await Api.get("/schoolnew/json/location_list.json");
@@ -46,7 +48,8 @@ const setComponents = async () => {
   console.log(coursesLists);
 
   if (LIST_TARGET) {
-    const courses = coursesLists.reduce((arr, list, i) => ([...arr, ...list]), []) || [];
+    const courses =
+      coursesLists.reduce((arr, list, i) => [...arr, ...list], []) || [];
     console.log(courses);
     // render List
     render(
@@ -54,7 +57,6 @@ const setComponents = async () => {
       LIST_TARGET
     );
   }
-
 };
 
 const Init = () => {

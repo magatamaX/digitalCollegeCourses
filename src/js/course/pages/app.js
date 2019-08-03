@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Static1 from "./Static1";
-import Static2 from "./Static2";
+import Static from "./Static";
 import Dynamic from "./Dynamic";
 import sortData from "./../helpers/sortData";
 
@@ -19,18 +18,14 @@ const App = props => {
   }, []);
 
   const { type, teachers, locations } = props;
-  if (type === "static1") {
+  if (type === "static") {
     return (
-      <Static1
+      <Static
         courses={courses}
         sortType={sortType}
         onSort={type => onSort(courses, type)}
       />
     );
-  }
-
-  if (type === "static2") {
-    return <Static2 courses={courses} />;
   }
 
   if (type === "dynamic") {
