@@ -1,0 +1,47 @@
+#globalHeader,
+#globalHeaderM,
+#menu,
+#navigation,
+#nlogin_form,
+#pageInfo,
+.copy,
+.college_menu,
+.sns_area{
+	display:none !important;
+}
+.main_img h1,
+.icon_limited,
+a.button,
+.new:after,
+.styles_name,
+#petit .main_img_theme,
+#rouge .main_img_theme,
+#mermaid1 .main_img_theme,
+#mermaid2 .main_img_theme,
+#memory .main_img_theme,
+#artist .main_img_theme{
+	color: #333;
+}
+.cont.footer_wrap{
+	display: none;
+}
+.course_schedule > tbody > tr{
+	border-top: 1px solid #dcdcdc;
+}
+.course_schedule, .blank_schedule{
+	box-shadow: none;
+}
+
+/* top */
+.styles .column_02_01 > div:before,
+.styles .column_02_01 > div:after,
+.styles .column_02_02 > div:before,
+.styles .column_02_02 > div:after{
+	top: 0;
+	height: 100%;
+}
+
+/* arealist */
+.arealist .course li{
+	border-bottom: 1px solid #dcdcdc;
+}

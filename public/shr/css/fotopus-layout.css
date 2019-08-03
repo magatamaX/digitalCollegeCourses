@@ -1,0 +1,1421 @@
+@charset "utf-8";
+
+/**********************************************************************************/
+/*NEW HEADER, MENU CSS*/
+/*@import "/shr/css/fotopus_header.css";*/
+/**********************************************************************************/
+body, div, p, pre, blockquote, th, td,
+dl, dt, dd, ul, ol, li,
+h1, h2, h3, h4, h5, h6,
+iframe, object, embed {
+  font-family: "ヒラギノ角ゴ Pro W3",Hiragino Kaku Gothic Pro W3,"メイリオ",Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+}
+
+.fotopus-nav-no-responsive .wrapper{
+  width: 100% !important;
+}
+
+/* COMMON */
+#fotopus-nav *,
+#fotopus-nav *:before,
+#fotopus-nav *:after {
+    box-sizing: border-box;
+    text-align: left;
+    outline: none !important;
+}
+#fotopus-nav{
+  font-family: "ヒラギノ角ゴ Pro W3",Hiragino Kaku Gothic Pro W3,"メイリオ",Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+}
+#fotopus-nav div:after,
+#fotopus-nav ul:after,
+#fotopus-nav dl:after {
+    display: block;
+    clear: both;
+}
+#fotopus-nav .visuallyhidden,
+#fotopus-nav [data-visual="hidden"] {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+}
+#fotopus-nav section{
+  overflow: hidden;
+  margin-bottom: 0;
+}
+#fotopus-nav a,
+#fotopus-nav a:link,
+#fotopus-nav a:visited,
+#fotopus-nav a:active{
+  color: #4c79a6 !important;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-size: 100%;
+  outline: none;
+  overflow: hidden;
+}
+
+#fotopus-nav{
+	line-height: 20px;
+	margin-bottom: 10px;
+}
+
+.fotopus-menu-opened {
+  overflow: hidden;
+  height: 100%;
+}
+
+/* FONT */
+@font-face {
+  font-family: 'fotopus-icon';
+  src: url("/common/css/fonts/fotopus-icon.ttf?2ielra") format("truetype"), url("/common/css/fonts/fotopus-icon.woff?2ielra") format("woff"), url("/common/css/fonts/fotopus-icon.svg?2ielra#fotopus-icon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+#fotopus-nav [class^="F_icon-"]:before,
+#fotopus-nav [class*=" F_icon-"]:before,
+[class^="F_icon-"]:before,
+[class*=" F_icon-"]:before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'fotopus-icon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.F_icon-link:before {
+  content: "\e91e";
+}
+.F_icon-commu:before {
+  content: "\e919";
+}
+.F_icon-diary:before {
+  content: "\e91a";
+}
+.F_icon-instagram:before {
+  content: "\e91b";
+}
+.F_icon-plane:before {
+  content: "\e91c";
+}
+.F_icon-sweetphoto:before {
+  content: "\e91d";
+}
+.F_icon-3dots:before {
+  content: "\e900";
+}
+.F_icon-alert:before {
+  content: "\e901";
+}
+.F_icon-arrow_bottom:before {
+  content: "\e902";
+}
+.F_icon-arrow_left:before {
+  content: "\e903";
+}
+.F_icon-arrow_right:before {
+  content: "\e904";
+}
+.F_icon-arrow_top:before {
+  content: "\e905";
+}
+.F_icon-calendar:before {
+  content: "\e906";
+}
+.F_icon-comment:before {
+  content: "\e907";
+}
+.F_icon-download:before {
+  content: "\e908";
+}
+.F_icon-garbage:before {
+  content: "\e909";
+}
+.F_icon-heart:before {
+  content: "\e90a";
+}
+.F_icon-letter:before {
+  content: "\e90b";
+}
+.F_icon-login:before {
+  content: "\e90c";
+}
+.F_icon-logout:before {
+  content: "\e90d";
+}
+.F_icon-menu:before {
+  content: "\e90e";
+}
+.F_icon-phone:before {
+  content: "\e90f";
+}
+.F_icon-smartphone:before {
+  content: "\e918";
+}
+.F_icon-search:before {
+  content: "\e910";
+}
+.F_icon-signup:before {
+  content: "\e911";
+}
+.F_icon-star:before {
+  content: "\e912";
+}
+.F_icon-upload:before {
+  content: "\e913";
+}
+.F_icon-facebook:before {
+  content: "\e914";
+}
+.F_icon-logo:before {
+  content: "\e915";
+}
+.F_icon-mypage:before {
+  content: "\e916";
+}
+.F_icon-twitter:before {
+  content: "\e917";
+}
+
+/* HEADER STYLE */
+#fotopus-nav #fotopus-header-section {
+  position: static;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 7999;
+  background: #fff;
+}
+@media only screen and (max-width: 920px) {
+  .fotopus-nav-no-responsive .warpper{
+    width: 930px;
+  }
+  .fotopus-nav-no-responsive #fotopus-nav,
+  .fotopus-nav-no-responsive #fotopus-nav #fotopus-header-section {
+    width: 920px;
+    margin: 0 auto;
+  }
+}
+
+#fotopus-nav #fotopus-header-section .fotopus-header-olympus-logo {
+  width: 175px;
+  padding: 10px 15px;
+  margin: 0;
+  position: relative;
+}
+
+#fotopus-nav #fotopus-header-section .fotopus-header-olympus-logo img {
+  width: 100%;
+  display: block;
+}
+
+@media only screen and (min-width: 790px) {
+  #fotopus-nav #fotopus-header-section .fotopus-header-olympus-logo {
+    width: 100%;
+    max-width: 920px;
+    margin: 0 auto;
+  }
+  #fotopus-nav #fotopus-header-section .fotopus-header-olympus-logo img {
+    width: 308px;
+    display: block;
+  }
+}
+
+@media only screen and (min-width: 920px) {
+  #fotopus-nav #fotopus-header-section .fotopus-header-olympus-logo {
+    padding: 10px 0 17px 0;
+  }
+}
+
+.fotopus-nav-no-responsive #fotopus-nav #fotopus-header-section .fotopus-header-olympus-logo {
+  width: 920px;
+  margin: 0 auto;
+  padding: 10px 0 17px 0;
+}
+.fotopus-nav-no-responsive #fotopus-nav #fotopus-header-section .fotopus-header-olympus-logo img {
+  width: 308px;
+  display: block;
+}
+
+#fotopus-nav #fotopus-header-section .fotopus-header-olympus-link {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  padding: 0;
+  margin: 0;
+}
+
+#fotopus-nav #fotopus-header-section .fotopus-header-olympus-link li {
+  display: inline-block;
+  border-right: solid 1px #ccc;
+  padding: 0 10px;
+  margin-right: -4px !important;
+}
+
+#fotopus-nav #fotopus-header-section .fotopus-header-olympus-link li:last-child {
+  border-right: none;
+  padding: 0 0 0 10px;
+  margin-right: 0 !important;
+}
+
+#fotopus-nav #fotopus-header-section .fotopus-header-olympus-link li a {
+  color: #333 !important;
+  font-size: 10px;
+	text-decoration: none;
+}
+
+#fotopus-nav #fotopus-header-section .fotopus-header-olympus-link li a:hover {
+  color: #333 !important;
+	text-decoration: underline;
+}
+
+@media only screen and (min-width: 920px) {
+  #fotopus-nav #fotopus-header-section .fotopus-header-olympus-link {
+    right: 0;
+  }
+}
+.fotopus-nav-no-responsive #fotopus-nav #fotopus-header-section .fotopus-header-olympus-link {
+  right: 0;
+}
+
+#fotopus-nav #fotopus-header-section .fotopus-header-login {
+  padding: 0 15px;
+  top: 35px;
+  right: 0;
+  font-size: 11px;
+  position: absolute;
+  width: 100%;
+  max-width: 920px;
+  text-align: right;
+}
+
+#fotopus-nav #fotopus-header-section .fotopus-header-login a {
+  font-size: 11px;
+}
+
+@media only screen and (min-width: 920px) {
+  #fotopus-nav #fotopus-header-section .fotopus-header-login {
+    padding: 0 0 0 15px;
+  }
+}
+.fotopus-nav-no-responsive #fotopus-nav #fotopus-header-section .fotopus-header-login {
+  padding: 0 0 0 15px;
+}
+
+/* HEADER GLOBAL NAV */
+#fotopus-nav #fotopus-header-section .fotopus-header-olympus-fixedWrap {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 920px;
+  margin-top: 15px;
+}
+
+#fotopus-nav #fotopus-header-olympus-navGlobal {
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  display: table;
+  line-height: 1.3;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+#fotopus-nav #fotopus-header-olympus-navGlobal li {
+  display: table-cell;
+  font-size: 75%;
+  vertical-align: middle;
+}
+
+#fotopus-nav #fotopus-header-olympus-navGlobal li a {
+  color: #666 !important;
+  display: block;
+  font-size: 13px;
+  padding: 8px 0;
+  text-align: center;
+  text-decoration: none;
+}
+
+#fotopus-nav #fotopus-header-olympus-navGlobal li a:hover,
+#fotopus-nav #fotopus-header-olympus-navGlobal li.active a {
+  background: #dfe4e7 none repeat scroll 0 0 !important;
+  color: #08107b !important;
+  text-decoration: none;
+}
+
+#fotopus-nav #fotopus-header-olympus-navGlobal li.fotopus-header-olympus-home a span {
+  border-left: medium none;
+  right: 0;
+}
+
+#fotopus-nav #fotopus-header-olympus-navGlobal li a span {
+  border-left: 1px solid #ccc;
+  display: block;
+  padding: 0 10px;
+  text-align: center;
+}
+
+/* FOTOPUS HEADER NAV */
+#fotopus-nav #fotopus-header-section .fotopus-header {
+  background: #08107b;
+  color: #fff !important;
+	position: relative;
+}
+
+#fotopus-nav #fotopus-header-section .fotopus-header-pc-warpper {
+  width: 100%;
+  margin: 0;
+	text-align: left;
+}
+
+@media only screen and (min-width: 790px) {
+  #fotopus-nav #fotopus-header-section .fotopus-header-pc-warpper {
+    width: 100%;
+    max-width: 920px;
+    position: relative;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+}
+@media only screen and (min-width: 920px) {
+	#fotopus-nav #fotopus-header-section .fotopus-header-pc-warpper {
+    padding: 0;
+  }
+}
+.fotopus-nav-no-responsive #fotopus-nav #fotopus-header-section .fotopus-header-pc-warpper {
+  width: 920px;
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+}
+
+#fotopus-nav #fotopus-header-section .fotopus-header-logo-wrapper {
+  position: relative;
+  padding: 15px;
+}
+
+@media only screen and (min-width: 790px) {
+  #fotopus-nav #fotopus-header-section .fotopus-header-logo-wrapper {
+    padding: 9px 0;
+    /*display: inline-block;*/
+    margin: 0;
+    overflow: hidden;
+  }
+}
+.fotopus-nav-no-responsive #fotopus-nav #fotopus-header-section .fotopus-header-logo-wrapper {
+  padding: 9px 0;
+  /*display: inline-block;*/
+  margin: 0;
+  overflow: hidden;
+}
+
+#fotopus-nav #fotopus-header-section .fotopus-header-logo {
+  width: 113.5px;
+  height: 30px;
+  margin: 0;
+  font-size: 0;
+	display: block;
+}
+
+#fotopus-nav #fotopus-header-section .fotopus-header-logo a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: url(/common/images/menu/fotopus-logo.svg) no-repeat center center;
+  background-size: contain;
+  cursor: pointer;
+  font-size: 0;
+}
+
+#fotopus-nav #fotopus-header-section .fotopus-header-item-wrapper {
+  position: absolute;
+  top: 10%;
+  right: 0;
+  display: block;
+  padding: 0 15px;
+}
+
+@media only screen and (min-width: 790px) {
+  #fotopus-nav #fotopus-header-section .fotopus-header-item-wrapper {
+    height: 100%;
+    padding: 0;
+    top: 0;
+  }
+}
+.fotopus-nav-no-responsive #fotopus-nav #fotopus-header-section .fotopus-header-item-wrapper {
+  height: 100%;
+  padding: 0;
+  top: 0;
+}
+
+#fotopus-nav #fotopus-header-section a.fotopus-header-item,
+#fotopus-nav #fotopus-header-section a.fotopus-header-item:link,
+#fotopus-nav #fotopus-header-section a.fotopus-header-item:active {
+  float: none;
+  width: auto;
+  padding: 0 12.5px;
+  color: #fff !important;
+  background-color: transparent;
+  text-decoration: none;
+  letter-spacing: 1px;
+  cursor: pointer;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 10px;
+  font-weight: normal;
+  margin: 0;
+  text-align: center;
+}
+
+@media only screen and (min-width: 790px) {
+  #fotopus-nav #fotopus-header-section a.fotopus-header-item,
+	#fotopus-nav #fotopus-header-section a.fotopus-header-item:link,
+	#fotopus-nav #fotopus-header-section a.fotopus-header-item:active {
+    font-size: 15px;
+    font-weight: normal;
+    line-height: 50px;
+    padding: 0 20px;
+    height: 100%;
+  }
+  #fotopus-nav #fotopus-header-section a.fotopus-header-item:last-child {
+    background: #e9b226 !important;
+    color: #08107b !important;
+    margin-right: 0 !important;
+  }
+}
+.fotopus-nav-no-responsive #fotopus-nav #fotopus-header-section a.fotopus-header-item,
+.fotopus-nav-no-responsive #fotopus-nav #fotopus-header-section a.fotopus-header-item:link,
+.fotopus-nav-no-responsive #fotopus-nav #fotopus-header-section a.fotopus-header-item:active {
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 50px;
+  padding: 0 20px;
+  height: 100%;
+}
+.fotopus-nav-no-responsive #fotopus-nav #fotopus-header-section a.fotopus-header-item:last-child {
+  background: #e9b226 !important;
+  color: #08107b !important;
+  margin-right: 0 !important;
+}
+
+#fotopus-nav #fotopus-header-section .fotopus-header-item-mypage {
+  display: inline-block;
+}
+
+@media only screen and (min-width: 790px) {
+  #fotopus-nav #fotopus-header-section .fotopus-header-item-mypage {
+    display: none;
+  }
+}
+.fotopus-nav-no-responsive #fotopus-nav #fotopus-header-section .fotopus-header-item-mypage {
+  display: none;
+}
+
+#fotopus-header-section .fotopus-header-item-menu {
+  padding-right: 0;
+  display: inline-block;
+  font-weight: normal;
+}
+
+@media only screen and (min-width: 790px) {
+  #fotopus-header-section .fotopus-header-item-menu {
+    padding: 0 20px;
+  }
+  #fotopus-header-section .fotopus-header-item-menu span {
+    color: #3f45a1 !important;
+  }
+}
+.fotopus-nav-no-responsive #fotopus-header-section .fotopus-header-item-menu {
+  padding: 0 20px;
+}
+.fotopus-nav-no-responsive #fotopus-header-section .fotopus-header-item-menu span {
+  color: #3f45a1 !important;
+}
+
+.fotopus-menu-opened #fotopus-header-section .fotopus-header-item-menu {
+  font-weight: normal;
+}
+
+@media only screen and (min-width: 790px) {
+  .fotopus-menu-opened #fotopus-header-section .fotopus-header-item-menu {
+    font-weight: bold;
+  }
+  .fotopus-menu-opened #fotopus-header-section .fotopus-header-item-menu span {
+    color: #fff !important;
+  }
+}
+.fotopus-nav-no-responsive .fotopus-menu-opened #fotopus-header-section .fotopus-header-item-menu {
+  font-weight: bold;
+}
+.fotopus-nav-no-responsive .fotopus-menu-opened #fotopus-header-section .fotopus-header-item-menu span {
+  color: #fff !important;
+}
+
+#fotopus-nav #fotopus-header-section a.fotopus-header-item:hover {
+  color: #fff !important;
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 790px) {
+  #fotopus-nav #fotopus-header-section a.fotopus-header-item:hover {
+    color: #4c79a6 !important;
+  }
+  #fotopus-nav #fotopus-header-section a.fotopus-header-item:hover:last-child {
+    color: #5b4714 !important;
+  }
+}
+.fotopus-nav-no-responsive #fotopus-nav #fotopus-header-section a.fotopus-header-item:hover {
+  color: #4c79a6 !important;
+}
+.fotopus-nav-no-responsive #fotopus-nav #fotopus-header-section a.fotopus-header-item:hover:last-child {
+  color: #5b4714 !important;
+}
+
+#fotopus-nav #fotopus-header-section a.fotopus-header-item:before {
+  font-family: 'fotopus-icon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 33px;
+  margin-right: 4.999px;
+  vertical-align: middle;
+  text-align: center;
+}
+
+@media only screen and (min-width: 790px) {
+  #fotopus-nav #fotopus-header-section a.fotopus-header-item:before {
+    display: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+}
+.fotopus-nav-no-responsive #fotopus-nav #fotopus-header-section a.fotopus-header-item:before {
+  display: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#fotopus-nav #fotopus-header-section a.fotopus-header-item-mypage:before {
+  content: "\e916";
+  display: block;
+  margin-right: 0;
+}
+
+@media only screen and (min-width: 790px) {
+  #fotopus-nav #fotopus-header-section a.fotopus-header-item-mypage:before {
+    display: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+}
+.fotopus-nav-no-responsive #fotopus-nav #fotopus-header-section a.fotopus-header-item-mypage:before {
+  display: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#fotopus-nav #fotopus-header-section a.fotopus-header-item-menu:before {
+  content: "\e90e";
+  display: block;
+  margin-right: 0;
+}
+
+@media only screen and (min-width: 790px) {
+  #fotopus-nav #fotopus-header-section a.fotopus-header-item-menu:before {
+    display: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+.fotopus-nav-no-responsive #fotopus-nav #fotopus-header-section a.fotopus-header-item-menu:before {
+  display: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* FOTOPUS MENU */
+.fotopus-menu-opened #fotopus-menu-section {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 8000;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+@media only screen and (min-width: 790px) {
+ #fotopus-menu-section {
+   display: none;
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   z-index: 8000;
+   background-color: rgba(0, 0, 0, 0.3);
+  }
+  .fotopus-menu-opened #fotopus-menu-section {
+    display: block;
+    position: absolute;
+    top: inherit;
+    bottom: inherit;
+    right: inherit;
+    left: inherit;
+  }
+}
+.fotopus-nav-no-responsive #fotopus-menu-section {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 8000;
+  background-color: rgba(0, 0, 0, 0.3);
+ }
+ .fotopus-nav-no-responsive .fotopus-menu-opened #fotopus-menu-section {
+   display: block;
+   width: 920px;
+   position: absolute;
+   top: inherit;
+   bottom: inherit;
+   right: inherit;
+   left: inherit;
+ }
+ @media only screen and (min-width: 930px) {
+   .fotopus-nav-no-responsive .fotopus-menu-opened #fotopus-menu-section{
+     width: 100%;
+   }
+}
+
+#fotopus-menu-section #fotopus-menu-section-warpper {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 8001;
+  -webkit-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  transform: translateX(100%);
+  /*transition: -webkit-transform 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: transform 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);*/
+}
+.fotopus-menu-opened #fotopus-menu-section #fotopus-menu-section-warpper {
+  -webkit-transform: translateX(0);
+  -ms-transform: translateX(0);
+  transform: translateX(0);
+  transition: -webkit-transform 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: transform 0.35s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+@media only screen and (min-width: 790px) {
+  #fotopus-menu-section #fotopus-menu-section-warpper,
+  .fotopus-menu-opened #fotopus-menu-section #fotopus-menu-section-warpper {
+    position: absolute;
+    height: 484px;
+    overflow: hidden;
+    -webkit-transform: none;
+    -ms-transform: none;
+    transform: none;
+    transition: none;
+  }
+}
+.fotopus-nav-no-responsive #fotopus-menu-section #fotopus-menu-section-warpper,
+.fotopus-nav-no-responsive .fotopus-menu-opened #fotopus-menu-section #fotopus-menu-section-warpper {
+  position: absolute;
+  height: 484px;
+  overflow: hidden;
+  -webkit-transform: none;
+  -ms-transform: none;
+  transform: none;
+  transition: none;
+}
+
+#fotopus-menu-section .fotopus-menu-close-button {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  background-color: #000;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  -webkit-transform-origin: 40px 0;
+  -ms-transform-origin: 40px 0;
+  transform-origin: 40px 0;
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+#fotopus-menu-section .fotopus-menu-close-button:before,
+#fotopus-menu-section .fotopus-menu-close-button:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  margin-left: -0.7px;
+  width: 1.4px;
+  height: 100%;
+  background-color: #fff;
+}
+
+#fotopus-menu-section .fotopus-menu-close-button:before {
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#fotopus-menu-section .fotopus-menu-close-button:after {
+  -webkit-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.fotopus-menu-opened #fotopus-menu-section .fotopus-menu-close-button {
+  z-index: 8003;
+  -webkit-transform-origin: 40px 0;
+  -ms-transform-origin: 40px 0;
+  transform-origin: 40px 0;
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+  transition: -webkit-transform 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: transform 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -webkit-backface-visibility: hidden;
+}
+
+#fotopus-menu-section .fotopus-menu .fotopus-menu-close-button-pc{
+  display: block;
+  border: 1px solid #ccc;
+  border-radius: 1px;
+  padding: 7px 10px;
+  color: #333;
+  font-size: 12px;
+  background-color: #fff;
+  margin: 10px;
+  cursor: pointer;
+}
+#fotopus-menu-section .fotopus-menu .fotopus-menu-close-button-pc:hover{
+  color:#4c79a6;
+  border: 1px solid #4c79a6;
+  background-color: #fafafa;
+}
+#fotopus-menu-section .fotopus-menu .fotopus-menu-close-button-pc span.fotopus-menu-close{
+  position: relative;
+  display: inline-block;
+  padding-left: 20px;
+}
+#fotopus-menu-section .fotopus-menu .fotopus-menu-close-button-pc span.fotopus-menu-close::before,
+#fotopus-menu-section .fotopus-menu .fotopus-menu-close-button-pc span.fotopus-menu-close::after{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  display: block;
+  width: 17px;
+  height: 1px;
+  margin-top: -1px;
+  background-color: #333;
+}
+#fotopus-menu-section .fotopus-menu .fotopus-menu-close-button-pc:hover span.fotopus-menu-close::before,
+#fotopus-menu-section .fotopus-menu .fotopus-menu-close-button-pc:hover span.fotopus-menu-close::after{
+  background-color: #4c79a6;
+}
+#fotopus-menu-section .fotopus-menu .fotopus-menu-close-button-pc span.fotopus-menu-close::before{
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+#fotopus-menu-section .fotopus-menu .fotopus-menu-close-button-pc span.fotopus-menu-close::after{
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+
+#fotopus-nav #fotopus-menu-section .fotopus-menu {
+  position: absolute;
+  z-index: 8002;
+  display: block;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: calc(100% - 40px);
+  background-color: #fff;
+  overflow-y: auto;
+}
+
+@media only screen and (min-width: 790px) {
+  #fotopus-nav #fotopus-menu-section .fotopus-menu {
+    width: 100%;
+    max-width: 920px;
+    height: auto;
+    position: relative;
+    margin: 0 auto;
+  }
+}
+.fotopus-nav-no-responsive #fotopus-nav #fotopus-menu-section .fotopus-menu {
+  width: 920px;
+  height: auto;
+  position: relative;
+  margin: 0 auto;
+}
+
+#fotopus-nav #fotopus-menu-section .fotopus-menu-content {
+  line-height: 1;
+  background: #08107b;
+}
+
+@media only screen and (min-width: 790px) {
+  #fotopus-nav #fotopus-menu-section .fotopus-menu-content {
+    background: #fff;
+    text-align: right;
+    padding-bottom: 30px;
+  }
+}
+.fotopus-nav-no-responsive #fotopus-nav #fotopus-menu-section .fotopus-menu-content {
+  background: #fff;
+  text-align: right;
+}
+
+#fotopus-nav #fotopus-menu-section .fotopus-menu-list {
+  position: relative;
+  display: block;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  vertical-align: top;
+}
+
+#fotopus-nav #fotopus-menu-section .fotopus-menu-list-open {
+  background: #4c79a6;
+}
+
+#fotopus-nav #fotopus-menu-section .fotopus-menu-list a {
+  display: block;
+  padding: 15px 20.5px;
+  font-size: 12.5px;
+  font-weight: normal;
+  color: #fff !important;
+  text-decoration: none;
+  line-height: 1;
+  vertical-align: middle;
+}
+@media only screen and (min-width: 375px) {
+  #fotopus-nav #fotopus-menu-section .fotopus-menu-list a {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (min-width: 790px) {
+  #fotopus-nav #fotopus-menu-section .fotopus-menu-list a {
+    color: #08107b !important;
+    padding: 7px 10px;
+    font-size: 12px;
+    cursor: default;
+  }
+  #fotopus-nav #fotopus-menu-section .fotopus-menu-list a span {
+    border-bottom: #ccc 1px solid;
+    display: block;
+    width: 100%;
+    position: relative;
+    padding-bottom: 5px;
+		line-height: 18px;
+  }
+}
+.fotopus-nav-no-responsive #fotopus-nav #fotopus-menu-section .fotopus-menu-list a {
+  color: #08107b !important;
+  padding: 7px 10px;
+  font-size: 12px;
+  cursor: default;
+}
+.fotopus-nav-no-responsive #fotopus-nav #fotopus-menu-section .fotopus-menu-list a span {
+  border-bottom: #ccc 1px solid;
+  display: block;
+  width: 100%;
+  position: relative;
+  padding-bottom: 5px;
+  line-height: 18px;
+}
+
+#fotopus-nav #fotopus-menu-section .fotopus-menu-list a.F_icon-letter {
+  padding: 10px 20.5px;
+}
+
+#fotopus-nav #fotopus-menu-section .fotopus-menu-list a:after {
+  font-size: 11px;
+  font-family: "fotopus-icon" !important;
+  content: "\e904";
+  color: #fff !important;
+  float: right;
+  padding-top: 1.5px;
+  vertical-align: middle;
+}
+
+#fotopus-nav #fotopus-menu-section .fotopus-menu-list-btn a:after {
+  font-family: "fotopus-icon" !important;
+  content: "\e902";
+}
+
+#fotopus-nav #fotopus-menu-section .fotopus-menu-list-open a:after {
+  font-family: "fotopus-icon" !important;
+  content: "\e905";
+}
+
+#fotopus-nav #fotopus-menu-section .fotopus-menu-signup {
+  display: block;
+  padding: 10px;
+  color: #fff !important;
+  background-color: #e9b226;
+  text-decoration: none;
+  letter-spacing: 1px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#fotopus-nav #fotopus-menu-section .fotopus-menu-content-signin {
+  display: block;
+  padding: 0;
+  height: 86.5px;
+  background: #fff;
+}
+
+#fotopus-nav #log_status_pc #nlogin_form,
+#fotopus-nav #log_status_sp #nlogin_form{
+  position: inherit !important;
+  right: 0 !important;
+  width: 100% !important;
+  top: 0 !important;
+  margin: 0 !important;
+}
+#fotopus-nav #log_status_sp #nlogin_form,
+#fotopus-nav #log_status_sp #nlogin_form #framelogin{
+  height: 100% !important;
+  max-height: 81px !important;
+}
+#fotopus-nav #log_status_pc #nlogin_form,
+#fotopus-nav #log_status_pc #nlogin_form #framelogin{
+  height: 25px !important;
+  width: 100% !important;
+}
+.fotopus-nav-no-responsive #fotopus-nav #log_status_pc #nlogin_form #framelogin{
+  height: 25px !important;
+  width: 100% !important;
+}
+
+@media only screen and (min-width: 790px) {
+  #fotopus-nav #fotopus-menu-section .fotopus-menu-list-drop li.fotopus-menu-list-item {
+    display: inline-block;
+    width: 19.5%;
+    vertical-align: top;
+  }
+
+  #fotopus-nav #fotopus-menu-section .fotopus-menu-list-drop li.fotopus-menu-list-item-2line {
+    display: inline-block;
+    width: 19.5%;
+    vertical-align: top;
+  }
+  #fotopus-nav #fotopus-menu-section .fotopus-menu-list-drop li.fotopus-menu-list-item-2line li.fotopus-menu-list-item {
+    width: 100%;
+    margin-top: 1em;
+  }
+  #fotopus-nav #fotopus-menu-section .fotopus-menu-list-drop li.fotopus-menu-list-item-2line li.fotopus-menu-list-item:first-child {
+    margin-top: 0;
+  }
+}
+.fotopus-nav-no-responsive #fotopus-nav #fotopus-menu-section .fotopus-menu-list-drop li.fotopus-menu-list-item {
+  display: inline-block;
+  width: 19.5%;
+  vertical-align: top;
+}
+.fotopus-nav-no-responsive #fotopus-nav #fotopus-menu-section .fotopus-menu-list-drop li.fotopus-menu-list-item-2line li.fotopus-menu-list-item {
+    width: 100%;
+    margin-top: 1em;
+}
+.fotopus-nav-no-responsive #fotopus-nav #fotopus-menu-section .fotopus-menu-list-drop li.fotopus-menu-list-item-2line li.fotopus-menu-list-item:first-child {
+  margin-top: 0;
+}
+
+#fotopus-nav #fotopus-menu-section .fotopus-menu-list-drop li.fotopus-menu-list-item a:after {
+  font-family: "fotopus-icon" !important;
+  content: "\e902";
+}
+
+@media only screen and (min-width: 790px) {
+  #fotopus-nav #fotopus-menu-section .fotopus-menu-list-drop li.fotopus-menu-list-item a:after {
+    display: none;
+  }
+}
+.fotopus-nav-no-responsive #fotopus-nav #fotopus-menu-section .fotopus-menu-list-drop li.fotopus-menu-list-item a:after {
+  display: none;
+}
+
+#fotopus-nav #fotopus-menu-section .fotopus-menu-list-drop li.fotopus-menu-list-item ul {
+  background: #fff;
+  overflow: hidden;
+  display: none;
+  list-style: none;
+  padding: 0;
+}
+
+@media only screen and (min-width: 790px) {
+  #fotopus-nav #fotopus-menu-section .fotopus-menu-list-drop li.fotopus-menu-list-item ul {
+    vertical-align: top;
+    display: block;
+  }
+  #fotopus-nav #fotopus-menu-section .fotopus-menu-list-drop li.fotopus-menu-list-item ul.menu-list06 {
+    display: inline-block;
+    width: 45%;
+  }
+}
+.fotopus-nav-no-responsive #fotopus-nav #fotopus-menu-section .fotopus-menu-list-drop li.fotopus-menu-list-item ul {
+  vertical-align: top;
+  display: block;
+}
+.fotopus-nav-no-responsive #fotopus-nav #fotopus-menu-section .fotopus-menu-list-drop li.fotopus-menu-list-item ul.menu-list06 {
+  display: inline-block;
+  width: 45%;
+}
+
+#fotopus-nav #fotopus-menu-section .fotopus-menu-list-drop li.fotopus-menu-list-item li a {
+  color: #333 !important;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media only screen and (min-width: 790px) {
+  #fotopus-nav #fotopus-menu-section .fotopus-menu-list-drop li.fotopus-menu-list-item li a {
+    line-height: 18px;
+  }
+}
+.fotopus-nav-no-responsive #fotopus-nav #fotopus-menu-section .fotopus-menu-list-drop li.fotopus-menu-list-item li a {
+  line-height: 18px;
+}
+
+#fotopus-nav #fotopus-menu-section .fotopus-menu-list-drop li.fotopus-menu-list-item li a:after {
+  display: none;
+}
+
+#fotopus-nav #fotopus-menu-section .fotopus-menu-list-drop li.fotopus-menu-list-item li a:hover {
+  color: #333 !important;
+}
+
+@media only screen and (min-width: 790px) {
+  #fotopus-nav #fotopus-menu-section .fotopus-menu-list-drop li.fotopus-menu-list-item li a:hover {
+    color: #4c79a6 !important;
+    text-decoration: underline;
+  }
+}
+.fotopus-nav-no-responsive #fotopus-nav #fotopus-menu-section .fotopus-menu-list-drop li.fotopus-menu-list-item li a:hover {
+  color: #4c79a6 !important;
+  text-decoration: underline;
+}
+
+#fotopus-nav #fotopus-menu-section .fotopus-newsletter-signup,
+#fotopus-nav #fotopus-menu-section .fotopus-log {
+  background: #4c79a6;
+  border-top: solid 1px #fff;
+  height: 45px;
+}
+
+#fotopus-nav #fotopus-menu-section .fotopus-log span {
+  padding: 10px 20.5px;
+	display: block;
+	font-size: 14px;
+	color: #fff !important;
+	line-height: 1;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
+#fotopus-nav #fotopus-menu-section .fotopus-newsletter-signup a:after,
+#fotopus-nav #fotopus-menu-section .fotopus-log span:after {
+  font-family: "fotopus-icon" !important;
+  content: "\e904";
+  padding-top: 7.5px;
+}
+
+#fotopus-nav #fotopus-menu-section .fotopus-log span:after {
+	font-size: 11px;
+  color: #fff !important;
+  float: right;
+	vertical-align: middle;
+}
+
+#fotopus-nav #fotopus-menu-section .fotopus-newsletter-signup a:before,
+#fotopus-nav #fotopus-menu-section .fotopus-log span:before {
+  display: inline;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 25px;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+
+#fotopus-nav #fotopus-menu-section .fotopus-menu-footer {
+  background: #fff;
+  text-align: center;
+}
+
+#fotopus-nav #fotopus-menu-section .fotopus-menu-footer img {
+  width: 70%;
+  max-width: 308px;
+  padding: 20px 0;
+  display: block;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+#fotopus-nav #fotopus-menu-section .fotopus-menu-footer table {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+#fotopus-nav #fotopus-menu-section .fotopus-menu-footer tr {
+  border-top: #ccc 1px solid;
+  text-align: center;
+}
+
+#fotopus-nav #fotopus-menu-section .fotopus-menu-footer td {
+  text-align: center;
+  padding: 15px;
+  font-size: 11px;
+}
+
+#fotopus-nav #fotopus-menu-section .fotopus-menu-footer td {
+  border-right: #ccc 1px solid;
+}
+
+#fotopus-nav #fotopus-menu-section .fotopus-footer-tr-last {
+  border-bottom: #ccc 1px solid;
+}
+
+#fotopus-nav #fotopus-menu-section .fotopus-menu-footer a {
+  text-align: center;
+  text-decoration: none;
+  font-size: 11px;
+  color: #333 !important;
+}
+
+#fotopus-nav #fotopus-menu-section .fotopus-menu-footer a:hover {
+  color: #333 !important;
+}
+
+/* PANKUZU, NEWSLETTER, SMARTPHONE */
+#fotopus-nav #fotopus-pankuzu-link-section {
+  position: relative;
+  padding: 6px 0;
+  border-bottom: 1px solid #08107b;
+  background: #fff;
+}
+
+#fotopus-nav #fotopus-pankuzu-link-section .fotopus-pankuzu-warpper {
+  width: 100%;
+  max-width: 920px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 15px;
+}
+@media only screen and (min-width: 920px) {
+	#fotopus-nav #fotopus-pankuzu-link-section .fotopus-pankuzu-warpper {
+		padding: 0;
+	}
+}
+.fotopus-nav-no-responsive #fotopus-nav #fotopus-pankuzu-link-section .fotopus-pankuzu-warpper {
+  padding: 0;
+  width: 920px;
+}
+
+#fotopus-nav #fotopus-pankuzu-link-section .fotopus-pankuzu {
+  font-size: 9px;
+  line-height: 15px;
+  width: calc(100% - 150px);
+}
+
+@media only screen and (min-width: 375px) {
+  #fotopus-nav #fotopus-pankuzu-link-section .fotopus-pankuzu {
+    font-size: 11px;
+    line-height: 18px;
+  }
+}
+
+@media only screen and (min-width: 520px) {
+  #fotopus-nav #fotopus-pankuzu-link-section .fotopus-pankuzu br{
+		display: none;
+  }
+}
+.fotopus-nav-no-responsive #fotopus-nav #fotopus-pankuzu-link-section .fotopus-pankuzu br{
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  #fotopus-nav #fotopus-pankuzu-link-section .fotopus-pankuzu {
+    width: calc(100% - 310px);
+    line-height: 20px;
+  }
+}
+
+@media only screen and (min-width: 920px) {
+  #fotopus-nav #fotopus-pankuzu-link-section .fotopus-pankuzu {
+    width: calc(100% - 300px);
+  }
+}
+.fotopus-nav-no-responsive #fotopus-nav #fotopus-pankuzu-link-section .fotopus-pankuzu {
+  width: calc(100% - 300px);
+  line-height: 20px;
+}
+
+#fotopus-nav #fotopus-pankuzu-link-section .fotopus-pankuzu a {
+  font-size: 11px;
+  text-decoration: none;
+}
+
+#fotopus-nav #fotopus-pankuzu-link-section .fotopus-pankuzu .F_icon-arrow_right:before {
+  font-size: 10px;
+}
+
+#fotopus-nav #fotopus-pankuzu-link-section .fotopus-newsletter-link {
+  font-size: 14px;
+  width: 120px;
+  position: absolute;
+  top: calc(50% - 11px);
+  right: 15px;
+}
+
+#fotopus-nav #fotopus-pankuzu-link-section .fotopus-newsletter-link {
+  right: 0;
+}
+
+#fotopus-nav #fotopus-pankuzu-link-section .fotopus-newsletter-link a {
+  text-decoration: none;
+}
+
+#fotopus-nav #fotopus-pankuzu-link-section .F_icon-phone:before,
+#fotopus-nav #fotopus-pankuzu-link-section .F_icon-letter:before {
+  display: inline;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 22px;
+  vertical-align: middle;
+  margin-right: 5px;
+  font-family: "fotopus-icon" !important;
+}
+
+/*PAGE TITLE*/
+#fotopus-nav #fotopus-site-title h1 {
+  font-size: 18px;
+  line-height: 1.5em;
+  letter-spacing: 2.5px;
+  font-weight: normal;
+  text-align: center;
+	margin: 0.67em 0;
+}
+
+@media only screen and (min-width: 790px) {
+  #fotopus-nav #fotopus-site-title h1 br {
+    display: none;
+  }
+}
+.fotopus-nav-no-responsive #fotopus-nav #fotopus-site-title h1 br {
+  display: none;
+}
+
+/*PC or SP show & hide*/
+#fotopus-nav #fotopus-header-section .fotopus-only-pc,
+#fotopus-nav #fotopus-menu-section .fotopus-only-pc,
+#fotopus-nav #fotopus-pankuzu-link-section .fotopus-only-pc{
+  display: none;
+}
+
+@media only screen and (min-width: 790px) {
+  #fotopus-nav #fotopus-header-section .fotopus-only-pc,
+  #fotopus-nav #fotopus-menu-section .fotopus-only-pc,
+  #fotopus-nav #fotopus-pankuzu-link-section .fotopus-only-pc {
+    display: block;
+  }
+  #fotopus-nav #fotopus-header-section .fotopus-header-item-wrapper .fotopus-only-pc {
+    display: inline-block;
+    margin-right: -4px !important;
+  }
+  #fotopus-nav #fotopus-menu-section .fotopus-menu-content button.fotopus-only-pc {
+    display: inline-block;
+  }
+}
+.fotopus-nav-no-responsive #fotopus-nav #fotopus-header-section .fotopus-only-pc,
+.fotopus-nav-no-responsive #fotopus-nav #fotopus-menu-section .fotopus-only-pc,
+.fotopus-nav-no-responsive #fotopus-nav #fotopus-pankuzu-link-section .fotopus-only-pc {
+  display: block;
+}
+.fotopus-nav-no-responsive #fotopus-nav #fotopus-header-section .fotopus-header-item-wrapper .fotopus-only-pc{
+  display: inline-block;
+  margin-right: -4px !important;
+}
+.fotopus-nav-no-responsive #fotopus-nav #fotopus-menu-section .fotopus-menu-content button.fotopus-only-pc{
+  display: inline-block;
+}
+
+#fotopus-nav #fotopus-header-section .fotopus-only-sp,
+#fotopus-nav #fotopus-menu-section .fotopus-only-sp,
+#fotopus-nav #fotopus-pankuzu-link-section .fotopus-only-sp {
+  display: block;
+}
+
+@media only screen and (min-width: 790px) {
+  #fotopus-nav #fotopus-header-section .fotopus-only-sp,
+  #fotopus-nav #fotopus-menu-section .fotopus-only-sp,
+  #fotopus-nav #fotopus-pankuzu-link-section .fotopus-only-sp {
+    display: none;
+  }
+}
+.fotopus-nav-no-responsive #fotopus-nav #fotopus-header-section .fotopus-only-sp,
+.fotopus-nav-no-responsive #fotopus-nav #fotopus-menu-section .fotopus-only-sp,
+.fotopus-nav-no-responsive #fotopus-nav #fotopus-pankuzu-link-section .fotopus-only-sp {
+  display: none;
+}
+
+/* content page pankuzu*/
+.topicPath{
+  margin-bottom: 10px;
+  padding: 0 15px;
+}
+@media only screen and (min-width: 790px) {
+  .topicPath{
+    padding: 0;
+  }
+}
