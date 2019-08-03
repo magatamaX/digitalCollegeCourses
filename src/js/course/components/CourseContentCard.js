@@ -1,7 +1,12 @@
 import React from "react";
 import changeDateFormat from "../helpers/changeDateFormat";
 
-const CourseContentCard = ({ courseInfo, classNamePrefix, children }) => {
+const CourseContentCard = ({
+  courseInfo,
+  remaining,
+  classNamePrefix,
+  children
+}) => {
   // 開催日が空のものを除外する
   const { details } = courseInfo;
 
@@ -18,7 +23,8 @@ const CourseContentCard = ({ courseInfo, classNamePrefix, children }) => {
             {detail.time}
           </li>
           <li className={`${classNamePrefix}__content-select-card-number`}>
-            定員：{courseInfo.定員}／残数：△
+            定員：{courseInfo.定員}／残数：{remaining.mark}
+            {remaining.text && `（${remaining.text}）`}
           </li>
           <li className={`${classNamePrefix}__content-select-card-place`}>
             {detail.place}

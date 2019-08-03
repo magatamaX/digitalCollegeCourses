@@ -17,19 +17,22 @@ const App = props => {
     onSort([...props.courses]);
   }, []);
 
-  const { type, teachers, locations } = props;
+  const { type, teachers, locations, remainings } = props;
   if (type === "static") {
     return (
       <Static
         courses={courses}
         sortType={sortType}
+        remainings={remainings}
         onSort={type => onSort(courses, type)}
       />
     );
   }
 
   if (type === "dynamic") {
-    return <Dynamic courses={courses} teachers={teachers} />;
+    return (
+      <Dynamic courses={courses} teachers={teachers} remainings={remainings} />
+    );
   }
 
   return <p>nothing.</p>;

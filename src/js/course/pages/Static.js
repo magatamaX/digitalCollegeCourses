@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import SortButton from "../components/SortButton";
 import EntryButton from "../components/EntryButton";
 import CourseContentCard from "../components/CourseContentCard";
+import displayRemainingNumber from "../helpers/displayRemainingNumber";
 
-const Static = ({ courses, onSort, sortType }) => {
+const Static = ({ courses, remainings, onSort, sortType }) => {
   const [id, setId] = useState("");
 
   return (
@@ -34,6 +35,11 @@ const Static = ({ courses, onSort, sortType }) => {
                   <CourseContentCard
                     classNamePrefix="base"
                     courseInfo={courseInfo}
+                    remaining={displayRemainingNumber(
+                      courseInfo.講座id,
+                      courseInfo.定員,
+                      remainings
+                    )}
                   >
                     <li className="base__content-select-card-lecturer">
                       {courseInfo.講師}

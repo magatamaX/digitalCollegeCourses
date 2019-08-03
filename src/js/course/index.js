@@ -6,10 +6,10 @@ import Api from "./api/";
 import generateCourses from "./helpers/generateCourses";
 import sortData from "./helpers/sortData";
 
-const CALLBACK_NAME = 'collegeData';
+const CALLBACK_NAME = "collegeData";
 
 // define callback function
-window[CALLBACK_NAME] = (arr) => {
+window[CALLBACK_NAME] = arr => {
   window.__COLLEGE_DATA__ = arr;
 };
 
@@ -28,13 +28,14 @@ const setComponents = async () => {
   const teachers = await Api.get("/schoolnew/json/teachers_list.json");
   const locations = await Api.get("/schoolnew/json/location_list.json");
 
-    console.log(originalCourses);
-    const courseIDs = originalCourses.map(c => c.講座id).join("_1,");
-    console.log(courseIDs);
+  console.log(originalCourses);
+  const courseIDs = originalCourses.map(c => c.講座id).join("_1,");
+  console.log(courseIDs);
 
-
-  const remainings = await Api.getJSONP(`https://fotopus.com/api/college/remain/sid/${courseIDs}`);
-  console.log(remainings)
+  const remainings = await Api.getJSONP(
+    `https://fotopus.com/api/college/remain/sid/${courseIDs}`
+  );
+  console.log(remainings);
 
   // helper::開催情報を配列化します。
   const generatedCourses = generateCourses(originalCourses);
@@ -55,6 +56,7 @@ const setComponents = async () => {
         courses={courses}
         teachers={teachers}
         locations={locations}
+        remainings={remainings}
       />,
       targetDom
     );

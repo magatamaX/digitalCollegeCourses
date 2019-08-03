@@ -4,8 +4,9 @@ import CourseContentFlexbox from "./../components/CourseContentFlexbox";
 import CourseContentCard from "../components/CourseContentCard";
 import CourseContentEntry from "./../components/CourseContentEntry";
 import Teacher from "./../components/Teacher";
+import displayRemainingNumber from "../helpers/displayRemainingNumber";
 
-const Dynamic = ({ loading, courses, teachers }) => {
+const Dynamic = ({ loading, courses, teachers, remainings }) => {
   if (loading) {
     return <p>Now Loading...</p>;
   }
@@ -30,7 +31,11 @@ const Dynamic = ({ loading, courses, teachers }) => {
           />
           <div className="course__content-select" style={{ paddingBottom: 0 }}>
             <h6 className="course__content">{course.都道府県}</h6>
-            <CourseContentCard classNamePrefix="course" courseInfo={course} />
+            <CourseContentCard classNamePrefix="course" courseInfo={course}                     remaining={displayRemainingNumber(
+                      course.講座id,
+                      course.定員,
+                      remainings
+                    )} />
           </div>
           <CourseContentEntry
             href={`/school/entry.php?seminar_id=${course.講座id}`}

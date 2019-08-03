@@ -16,21 +16,22 @@ export default class Api {
     const result = await axios
       .get(url, {
         params: {
-          "callback": name,
-          "_": new Date().getTime()
+          callback: name,
+          _: new Date().getTime()
         },
         headers: {
-          "Accept": "text/javascript, application/javascript, application/ecmascript, application/x-ecmascript",
+          Accept:
+            "text/javascript, application/javascript, application/ecmascript, application/x-ecmascript",
           "X-Requested-With": "XMLHttpRequest"
         }
       })
       .then(res => {
-        const script = document.createElement('script');
+        const script = document.createElement("script");
         script.type = "text/javascript";
         script.innerHTML = res.data;
 
         // execute callback function
-        const s = document.getElementsByTagName('script')[0];
+        const s = document.getElementsByTagName("script")[0];
         s.parentNode.insertBefore(script, s);
         return window.__COLLEGE_DATA__;
       })
