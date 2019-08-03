@@ -1,5 +1,4 @@
-import axios from "axios-jsonp-pro";
-import jsonp from "jsonp";
+import axios from "axios";
 
 export default class Api {
   static async get(url, params = {}, responseType = "json") {
@@ -14,27 +13,31 @@ export default class Api {
   }
 
   static async getJSONP(url, name = "collegeData") {
-    return new Promise(function(resolve, reject) {
-      jsonp(url, { name }, (error, data) => {
-        if (error) {
-          console.log("error!!");
-          throw new Error("err");
-        } else {
-          console.log("datadata::", data);
-          resolve(data);
+    const result = await axios
+      .get(url, {
+        params: {
+          "callback": name,
+          "_": new Date().getTime()
+        },
+        headers: {
+          "Accept": "text/javascript, application/javascript, application/ecmascript, application/x-ecmascript",
+          "X-Requested-With": "XMLHttpRequest"
         }
+      })
+      .then(res => {
+        const script = document.createElement('script');
+        script.type = "text/javascript";
+        script.innerHTML = res.data;
+
+        // execute callback function
+        const s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(script, s);
+        return window.__COLLEGE_DATA__;
+      })
+      .catch(error => {
+        console.log(error);
+        return [];
       });
-      // $.ajax({
-      //   type: 'GET',
-      //   // url: '/school/common/json/courseID.json', // 繝�せ繝育畑
-      //   url, // 譛ｬ逡ｪ逕ｨ
-      //   dataType: 'jsonp',
-      //   jsonpCallback: name
-      // }).done(function(data) {
-      //   resolve(data);
-      // });
-    })
-      .then(data => data)
-      .catch(error => error);
+    return result;
   }
 }
