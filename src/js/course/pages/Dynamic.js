@@ -31,11 +31,15 @@ const Dynamic = ({ loading, courses, teachers, remainings }) => {
           />
           <div className="course__content-select" style={{ paddingBottom: 0 }}>
             <h6 className="course__content">{course.都道府県}</h6>
-            <CourseContentCard classNamePrefix="course" courseInfo={course}                     remaining={displayRemainingNumber(
-                      course.講座id,
-                      course.定員,
-                      remainings
-                    )} />
+            <CourseContentCard
+              classNamePrefix="course"
+              courseInfo={course}
+              remaining={displayRemainingNumber(
+                course.講座id,
+                course.定員,
+                remainings
+              )}
+            />
           </div>
           <CourseContentEntry
             href={`/school/entry.php?seminar_id=${course.講座id}`}

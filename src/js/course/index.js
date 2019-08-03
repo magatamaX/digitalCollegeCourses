@@ -21,14 +21,12 @@ const APP_TARGETS = Array.from(document.querySelectorAll(".js-course-app"));
 
 const setComponents = async () => {
   // get data
-  const originalCourses = await Api.get(
-    "https://www.fotopus9m.com/api/college/search"
-  );
+  const originalCourses = await Api.get("/api/college/search");
   // const originalCourses = await Api.get("/json/course.json");
   const teachers = await Api.get("/schoolnew/json/teachers_list.json");
   const locations = await Api.get("/schoolnew/json/location_list.json");
 
-  console.log(originalCourses.filter(d => d.女性限定 !== ''));
+  console.log(originalCourses.filter(d => d.女性限定 !== ""));
   const courseIDs = originalCourses.map(c => c.講座id).join("_1,");
   console.log(courseIDs);
 
