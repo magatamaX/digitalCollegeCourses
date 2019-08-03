@@ -35,11 +35,9 @@ const Static = ({ courses, onSort, sortType }) => {
                     classNamePrefix="base"
                     courseInfo={courseInfo}
                   >
-                    {() => (
-                      <li className="base__content-select-card-lecturer">
-                        {courseInfo.講師}
-                      </li>
-                    )}
+                    <li className="base__content-select-card-lecturer">
+                      {courseInfo.講師}
+                    </li>
                   </CourseContentCard>
                 </li>
               </ul>

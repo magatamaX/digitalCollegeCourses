@@ -11,7 +11,7 @@ const Left = ({ courseInfo, teacherComponent }) => (
   <li>
     <div className="course__content-leftbox">
       <div className="course__content-courseimage pc-show">
-        <img src="../../images/course/course01.jpg" alt="" />
+        <img src={`/schoolnew/images/lesson/${courseInfo.講座id}.jpg`} alt="" />
       </div>
       <sup className="course__content-sup pc-show">※写真はイメージです</sup>
       {teacherComponent()}
@@ -24,7 +24,7 @@ const Right = ({ courseInfo }) => (
     <div className="course__content-col2">
       <h4 className="course__content">{courseInfo.タイトル}</h4>
       <div className="course__content-courseimage sp-show">
-        <img src="../../images/course/course01.jpg" alt="" />
+        <img src={`/schoolnew/images/lesson/${courseInfo.講座id}.jpg`} alt="" />
       </div>
       <sup className="course__content-sup sp-show">※写真はイメージです</sup>
       <div className="course__content-tag pc-show">

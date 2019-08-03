@@ -23,7 +23,7 @@ const CourseContentCard = ({ courseInfo, classNamePrefix, children }) => {
           <li className={`${classNamePrefix}__content-select-card-place`}>
             {detail.place}
           </li>
-          {children()}
+          {children}
         </ul>
       ))}
     </div>

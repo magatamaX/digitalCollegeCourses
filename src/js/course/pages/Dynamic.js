@@ -22,7 +22,6 @@ const Dynamic = ({ loading, courses, teachers }) => {
             courseInfo={course}
             teacherComponent={() => (
               <Teacher
-                id={course.講座id}
                 name={course.講師.split("　").join("")}
                 profile={course.講師プロフィール}
                 teachers={teachers}
