@@ -17,8 +17,8 @@ const CourseContentCard = ({
         classNamePrefix === "base" ? "-base" : ""
       }`}
     >
-      {details.map(detail => (
-        <ul key={detail.date}>
+      {details.map((detail, i) => (
+        <ul key={i}>
           {sortType && sortType === "day" && (
             <li className={`${classNamePrefix}__content-select-card-place`}>
               {courseInfo.都道府県}

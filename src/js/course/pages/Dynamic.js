@@ -12,7 +12,7 @@ const Dynamic = ({ loading, courses, teachers, remainings }) => {
   }
 
   if (!courses.length) {
-    return <p>現在、参加受け付け中の講座はございません。</p>;
+    return <div className="blank_schedule"><p className="text_red">現在、参加受け付け中の講座はございません。</p></div>;
   }
 
   return (
