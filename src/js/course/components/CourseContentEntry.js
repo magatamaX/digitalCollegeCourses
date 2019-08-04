@@ -5,7 +5,7 @@ const CourseContentEntry = ({ href }) => {
     <div className="course__content-select">
       <div className="course__content-select-btn">
         <a href={href}>
-          <img src="../../images/course/btn_select.png" alt="" />
+          <img src="/schoolnew/images/course/btn_select.png" alt="" />
           お申し込み
         </a>
       </div>
