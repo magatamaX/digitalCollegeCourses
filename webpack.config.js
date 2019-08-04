@@ -1,3 +1,6 @@
+const webpack = require('webpack');
+const env = require('./env');
+
 /***************************************
 ** Root path name
 ***************************************/
@@ -54,7 +57,11 @@ module.exports = [
             path: `${__dirname}/${ROOT_PATH_NAME}`,
             filename: '[name].js'
         },
-
+        plugins: [
+            new webpack.DefinePlugin({
+                "__COLLEGE_ROOT_PATH__": JSON.stringify(env.getRootPath(mode))
+            })
+          ],
         module: {
             rules: [
                 {
