@@ -71,6 +71,7 @@ const Static = ({ courses, remainings, locations, onSort, sortType }) => {
                 </li>
                 <li>
                   <CourseContentCard
+                    currentSelectedId={id}
                     sortType={sortType}
                     classNamePrefix="base"
                     courseInfo={courseInfo}

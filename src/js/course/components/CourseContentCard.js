@@ -2,6 +2,7 @@ import React from "react";
 import changeDateFormat from "../helpers/changeDateFormat";
 
 const CourseContentCard = ({
+  currentSelectedId,
   courseInfo,
   remaining,
   classNamePrefix,
@@ -25,9 +26,7 @@ const CourseContentCard = ({
 
   return (
     <div
-      className={`${classNamePrefix}__content-select-card${
-        classNamePrefix === "base" ? "-base" : ""
-      }`}
+      className={`${classNamePrefix}__content-select-card${classNamePrefix === "base" ? "-base" : ""} ${currentSelectedId === courseInfo.講座id ? "current" : ""}`}
     >
       {details.map((detail, i) => (
         <ul key={i}>
