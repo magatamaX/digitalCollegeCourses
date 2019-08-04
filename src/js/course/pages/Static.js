@@ -66,6 +66,7 @@ const Static = ({ courses, remainings, locations, onSort, sortType }) => {
                     type="radio"
                     name="baseSelect"
                     value={courseInfo.講座id}
+                    checked={id === courseInfo.講座id}
                     onChange={() => setId(courseInfo.講座id)}
                   />
                 </li>

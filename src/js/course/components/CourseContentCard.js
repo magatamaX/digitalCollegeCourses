@@ -26,7 +26,9 @@ const CourseContentCard = ({
 
   return (
     <div
-      className={`${classNamePrefix}__content-select-card${classNamePrefix === "base" ? "-base" : ""} ${currentSelectedId === courseInfo.講座id ? "current" : ""}`}
+      className={`${classNamePrefix}__content-select-card${
+        classNamePrefix === "base" ? "-base" : ""
+      } ${currentSelectedId === courseInfo.講座id ? "current" : ""}`}
     >
       {details.map((detail, i) => (
         <ul key={i}>
