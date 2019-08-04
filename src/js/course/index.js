@@ -7,12 +7,16 @@ import generateCourses from "./helpers/generateCourses";
 import sortData from "./helpers/sortData";
 import Prefectures from "./pages/Prefectures";
 
+// ------------------------------
+// JSONP setting
+// ------------------------------
 const CALLBACK_NAME = "collegeData";
 
 // define callback function
 window[CALLBACK_NAME] = arr => {
   window.__COLLEGE_DATA__ = arr;
 };
+// ------------------------------
 
 // target DOMS
 const LIST_TARGET = document.querySelector(".js-course-list");
@@ -31,7 +35,9 @@ const setComponents = async () => {
   const courseIDs = originalCourses.map(c => c.講座id).join("_1,");
 
   // get remainings list
-  const remainings = await Api.getJSONP(`${__COLLEGE_ROOT_PATH__}/api/college/remain/sid/${courseIDs}`);
+  const remainings = await Api.getJSONP(
+    `${__COLLEGE_ROOT_PATH__}/api/college/remain/sid/${courseIDs}`
+  );
 
   // helper::開催情報を配列化します。
   const generatedCourses = generateCourses(originalCourses);

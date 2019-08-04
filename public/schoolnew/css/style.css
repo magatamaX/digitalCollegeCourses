@@ -1626,7 +1626,6 @@ h6.course__content {
   border-radius: 3px;
   -webkit-transition: all .1s;
   transition: all .1s;
-  margin-bottom: 20px;
   width: 100%;
   padding: 10px 0;
 }
@@ -5275,6 +5274,10 @@ a:hover .list-auction-img > img {
   background: url("/schoolnew/images/course/mainimg/snap_SP.jpg");
   background-size: cover;
   height: 230px;
+}
+
+.js-course-app + footer {
+  margin-top: 60px;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
