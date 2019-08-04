@@ -6,17 +6,17 @@ import CourseContentEntry from "./../components/CourseContentEntry";
 import Teacher from "./../components/Teacher";
 import displayRemainingNumber from "../helpers/displayRemainingNumber";
 
-const Dynamic = ({ loading, courses, teachers, remainings }) => {
-  if (loading) {
-    return <p>Now Loading...</p>;
-  }
-
+const Dynamic = ({ courses, teachers, locations, remainings }) => {
   if (!courses.length) {
-    return <div className="blank_schedule"><p className="text_red">現在、参加受け付け中の講座はございません。</p></div>;
+    return (
+      <div className="blank_schedule course__blank-schedule">
+        <p className="text_red">現在、参加受け付け中の講座はございません。</p>
+      </div>
+    );
   }
 
   return (
-    <div>
+    <div className="course__app-wrapper">
       {courses.map((course, i) => (
         <CourseContent key={i} id={course.講座id}>
           <CourseContentFlexbox
@@ -34,6 +34,7 @@ const Dynamic = ({ loading, courses, teachers, remainings }) => {
             <CourseContentCard
               classNamePrefix="course"
               courseInfo={course}
+              locations={locations}
               remaining={displayRemainingNumber(
                 course.講座id,
                 course.定員,

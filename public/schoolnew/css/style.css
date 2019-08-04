@@ -1384,6 +1384,14 @@ h6.course__content {
   display: block;
 }
 
+.course__app-wrapper {
+  margin-top: 30px;
+}
+
+.course__blank-schedule.blank_schedule {
+  margin-top: 30px;
+}
+
 .course__content-flexbox {
   display: -webkit-box;
   display: -ms-flexbox;

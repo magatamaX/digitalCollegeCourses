@@ -6,10 +6,22 @@ const CourseContentCard = ({
   remaining,
   classNamePrefix,
   sortType,
+  locations,
   children
 }) => {
-  // 開催日が空のものを除外する
   const { details } = courseInfo;
+
+  const setLocationLink = (str, obj) => {
+    if (obj.hasOwnProperty(str)) {
+      return (
+        <a href={obj[str]} target="_blank">
+          {str}
+        </a>
+      );
+    }
+
+    return str;
+  };
 
   return (
     <div
@@ -40,7 +52,7 @@ const CourseContentCard = ({
             {remaining.text && `（${remaining.text}）`}
           </li>
           <li className={`${classNamePrefix}__content-select-card-place`}>
-            {detail.place}
+            {setLocationLink(detail.place, locations[0])}
           </li>
           {children}
         </ul>

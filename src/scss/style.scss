@@ -1570,6 +1570,14 @@ h6.course__content {
   }
 }
 
+.course__app-wrapper {
+  @include mt(30px);
+}
+
+.course__blank-schedule.blank_schedule {
+  @include mt(30px);
+}
+
 .course__content-flexbox {
   display: -webkit-box;
   display: flex;

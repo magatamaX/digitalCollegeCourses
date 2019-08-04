@@ -4,7 +4,7 @@ import EntryButton from "../components/EntryButton";
 import CourseContentCard from "../components/CourseContentCard";
 import displayRemainingNumber from "../helpers/displayRemainingNumber";
 
-const Static = ({ courses, remainings, onSort, sortType }) => {
+const Static = ({ courses, remainings, locations, onSort, sortType }) => {
   const [id, setId] = useState("");
   const [scrollBottom, setScrollBottom] = useState(0);
   const [listOffsetTop, setListOffsetTop] = useState(0);
@@ -74,6 +74,7 @@ const Static = ({ courses, remainings, onSort, sortType }) => {
                     sortType={sortType}
                     classNamePrefix="base"
                     courseInfo={courseInfo}
+                    locations={locations}
                     remaining={displayRemainingNumber(
                       courseInfo.講座id,
                       courseInfo.定員,

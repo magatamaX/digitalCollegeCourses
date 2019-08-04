@@ -24,6 +24,7 @@ const App = props => {
         courses={courses}
         sortType={sortType}
         remainings={remainings}
+        locations={locations}
         onSort={type => onSort(courses, type)}
       />
     );
@@ -31,11 +32,14 @@ const App = props => {
 
   if (type === "dynamic") {
     return (
-      <Dynamic courses={courses} teachers={teachers} remainings={remainings} />
+      <Dynamic
+        courses={courses}
+        teachers={teachers}
+        remainings={remainings}
+        locations={locations}
+      />
     );
   }
-
-  return <p>nothing.</p>;
 };
 
 export default App;

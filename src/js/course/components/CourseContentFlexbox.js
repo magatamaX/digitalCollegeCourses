@@ -3,7 +3,11 @@ import CourseIcons from "./../components/CourseIcons";
 
 const setBreak = str => {
   const arr = str.split("\n");
-  const elms = arr.map((el, i) => <div key={i}>{el}</div>);
+  const elms = arr.map((el, i) => (
+    <span style={{ display: `block` }} key={i}>
+      {el}
+    </span>
+  ));
   return elms;
 };
 
@@ -50,17 +54,17 @@ const Right = ({ courseInfo }) => (
         <input id={`${courseInfo.講座id}__2`} type="checkbox" name="tabs" />
         <label htmlFor={`${courseInfo.講座id}__2`}>カメラ</label>
         <div className="course__content-accordion-content">
-          <div>{setBreak(courseInfo.講座注記)}</div>
+          <p>{setBreak(courseInfo.講座注記)}</p>
         </div>
         <hr className="course__content-description-hr" />
       </div>
       <ul className="course__content-price">
-        <li className="course__regularPriceMember">通常会員</li>
+        <li className="course__regularPriceMember">通常価格</li>
         <li className="course__regularPrice">
           ¥{courseInfo.料金その他.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,")}
           <span>税込</span>
         </li>
-        <li className="course__premirePriceMember">プレミア会員</li>
+        <li className="course__premirePriceMember">プレミア会員価格</li>
         <li className="course__premirePrice">
           ¥{courseInfo.料金プレミア.replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,")}
           <span>税込</span>
