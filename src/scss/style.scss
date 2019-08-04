@@ -1847,7 +1847,7 @@ h6.course__content {
   border-radius: 3px;
   -webkit-transition: all .1s;
   transition: all .1s;
-  margin-bottom: 20px
+  margin-bottom: 20px;
 }
 
 .course__content-select-card-base:hover {
@@ -1940,7 +1940,6 @@ h6.course__content {
   border-radius: 3px;
   -webkit-transition: all .1s;
   transition: all .1s;
-  margin-bottom: 20px;
   width: 100%;
   @include pd(10px 0);
 }
@@ -6979,3 +6978,7 @@ a:hover .list-auction-img>img {
       height: 207px
     }
   }
+
+.js-course-app + footer {
+  @include mt(60px);
+}

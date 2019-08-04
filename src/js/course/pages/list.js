@@ -3,7 +3,7 @@ import CourseIndex from "./../components/CourseIndex";
 
 const List = ({ courses }) => {
   if (!courses.length) {
-    return <p>Nothing to list.</p>;
+    return null;
   }
 
   return <CourseIndex courses={courses} />;
