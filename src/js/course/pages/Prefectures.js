@@ -1,6 +1,7 @@
 import React from "react";
 import changeDateFormat from "./../helpers/changeDateFormat";
 import regionsMap from "./../references/regionsMap";
+import URIMap from "./../references/urimap";
 
 const Prefectures = ({ courses }) => {
   const prefecturesMap = courses.reduce((map, item, i) => {
@@ -28,11 +29,11 @@ const Prefectures = ({ courses }) => {
   let ichiranDom = [];
   for (const [region, prefs] of ichiranMap) {
     ichiranDom.push(
-      <li id={`list${region}`} style={{ display: `inline-block` }}>
+      <li id={`list${region}`} key={region} style={{ display: `inline-block` }}>
         <dl>
           <dt>{region}</dt>
-          {prefs.map(pref => (
-            <dd className={pref} style={{ display: `inline-block` }}>
+          {prefs.map((pref, i) => (
+            <dd className={pref} key={i} style={{ display: `inline-block` }}>
               <a href={`#${pref}`}>{pref}</a>
             </dd>
           ))}
@@ -44,12 +45,12 @@ const Prefectures = ({ courses }) => {
   let listDom = [];
   for (const [key, value] of prefecturesMap) {
     listDom.push(
-      <div id={key}>
+      <div id={key} key={key}>
         <h3>{key}</h3>
         <ul className="course">
           {value.map(course => (
             <li id={course.講座id} key={course.講座id}>
-              <a href={`/schoolnew/${course.ページid}/#${course.講座id}`}>
+              <a href={`${URIMap.get(course.ページid)}#${course.講座id}`}>
                 {course.タイトル}
               </a>
               <br />
@@ -68,9 +69,9 @@ const Prefectures = ({ courses }) => {
 
   return (
     <React.Fragment>
-      <div class="course_intro">
-        <h2 class="links_head">都道府県一覧</h2>
-        <ul id="arealist_link" class="arealist_link">
+      <div className="course_intro">
+        <h2 className="links_head">都道府県一覧</h2>
+        <ul id="arealist_link" className="arealist_link">
           {ichiranDom}
         </ul>
       </div>
