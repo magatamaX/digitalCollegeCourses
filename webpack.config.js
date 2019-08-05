@@ -36,7 +36,8 @@ const DEV_SERVER = {
     // open: true,
     port: PORT_NUMBER,
     host: '0.0.0.0',
-    watchContentBase: true
+    watchContentBase: true,
+    disableHostCheck: true
 }
 
 /***************************************
