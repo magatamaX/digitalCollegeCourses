@@ -45,6 +45,16 @@ const Static = ({ courses, remainings, locations, onSort, sortType }) => {
     }
   }, [scrollBottom, listOffsetTop]);
 
+  if (!courses.length) {
+    return (
+      <div className="course__content-select">
+        <p className="text_red" style={{ marginBottom: 0 }}>
+          現在、参加受け付け中の講座はございません。
+        </p>
+      </div>
+    );
+  }
+
   return (
     <div className="course__content-select" ref={listEl}>
       <p>下記講座のいずれかを選択してください。</p>
