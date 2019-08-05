@@ -8,7 +8,13 @@ export default class Api {
         responseType
       })
       .then(res => res.data)
-      .catch(error => error);
+      .catch(error => {
+        console.error(
+          `${url}からデータを取得できませんでした。空配列を返します。`,
+          error
+        );
+        return [];
+      });
     return result;
   }
 
@@ -36,7 +42,10 @@ export default class Api {
         return window.__COLLEGE_DATA__;
       })
       .catch(error => {
-        console.log(error);
+        console.error(
+          `${url}からデータを取得できませんでした。空配列を返します。`,
+          error
+        );
         return [];
       });
     return result;
